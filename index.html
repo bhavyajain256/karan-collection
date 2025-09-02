@@ -5,78 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karan Collections | Uniform Manufacturers</title>
   <meta name="description" content="Karan Collections – Manufacturers of uniforms for schools, colleges, hospitals, and corporates." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary: #6c63ff;
+      --secondary: #ffb347;
+      --bg-light: #fefcfb;
+      --text-dark: #333;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.6;
     }
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
+      background: #fff;
       padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     header h1 {
-      margin: 0;
       font-size: 1.8rem;
-      color: #2a4d69;
-    }
-    nav {
-      margin-top: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
     }
     nav a {
-      margin: 0 0.75rem;
+      margin: 0 1rem;
       text-decoration: none;
-      color: #2a4d69;
-      font-weight: bold;
+      color: var(--text-dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
     }
     .hero {
-      background: linear-gradient(135deg, #eaf6ff, #ffffff);
+      background: linear-gradient(135deg, #e6e9ff, #fffaf0);
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
     }
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
-      color: #1b3b5f;
+      color: var(--primary);
+      font-weight: 700;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
       color: #555;
     }
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #574fe1;
+    }
     section {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
     }
     section h3 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
       text-align: center;
-      color: #2a4d69;
+      margin-bottom: 2rem;
+      color: var(--primary);
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
     .card {
       background: #fff;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       padding: 1.5rem;
       text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
     .card img {
       max-width: 100%;
-      border-radius: 6px;
+      border-radius: 10px;
       margin-bottom: 1rem;
     }
     .contact-form {
@@ -84,34 +117,37 @@
       margin: auto;
       background: #fff;
       padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid #eee;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
     .contact-form input,
     .contact-form textarea {
       width: 100%;
-      padding: 0.75rem;
+      padding: 0.85rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
     }
     .contact-form button {
-      background: #2a4d69;
+      background: var(--secondary);
       color: #fff;
       border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      padding: 0.85rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
       cursor: pointer;
+      transition: background 0.3s;
     }
     .contact-form button:hover {
-      background: #16324f;
+      background: #e89a24;
     }
     footer {
-      background: #ffffff;
-      border-top: 1px solid #ddd;
+      background: #fff;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #eee;
       color: #666;
     }
   </style>
@@ -128,32 +164,33 @@
   </header>
 
   <section class="hero">
-    <h2>Crafting Quality Uniforms</h2>
-    <p>For Schools, Colleges, Hospitals & Corporates</p>
+    <h2>Crafting Stylish Uniforms</h2>
+    <p>Bright, Comfortable, and Built for Every Industry</p>
+    <a href="#contact" class="btn-primary">Get in Touch</a>
   </section>
 
   <section id="about">
     <h3>About Us</h3>
-    <p>Karan Collections specializes in manufacturing high-quality uniforms tailored for education, healthcare, and professional industries. We combine comfort, durability, and design to create uniforms that stand out.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">Karan Collections brings creativity and quality together. From schools to hospitals to corporates, we design uniforms that radiate professionalism and comfort. Our focus is on fabric, fit, and fresh designs.</p>
   </section>
 
   <section id="portfolio">
     <h3>Our Work</h3>
     <div class="cards">
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="School Uniforms">
+        <img src="https://via.placeholder.com/300x200/ffe6e6/333" alt="School Uniforms">
         <h4>School Uniforms</h4>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="College Uniforms">
+        <img src="https://via.placeholder.com/300x200/e6f7ff/333" alt="College Uniforms">
         <h4>College Uniforms</h4>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Hospital Uniforms">
+        <img src="https://via.placeholder.com/300x200/eaffea/333" alt="Hospital Uniforms">
         <h4>Hospital Uniforms</h4>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Corporate Uniforms">
+        <img src="https://via.placeholder.com/300x200/fff0e6/333" alt="Corporate Uniforms">
         <h4>Corporate Uniforms</h4>
       </div>
     </div>
@@ -161,7 +198,7 @@
 
   <section id="industries">
     <h3>Industries We Serve</h3>
-    <p>We provide tailored uniform solutions for educational institutions, healthcare facilities, and corporate businesses, ensuring comfort and professionalism in every stitch.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">We provide creative uniform solutions for education, healthcare, and corporate spaces. Our uniforms are designed to make people feel confident, comfortable, and stylish in their work environment.</p>
   </section>
 
   <section id="contact">
@@ -175,7 +212,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Karan Collections. All Rights Reserved.</p>
+    <p>&copy; 2025 Karan Collections. Crafted with creativity ✨</p>
   </footer>
 </body>
 </html>
