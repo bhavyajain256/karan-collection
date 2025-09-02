@@ -4,28 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karan Collections | Uniform Manufacturer Jaipur</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background: #fafafc; color: #222; }
-    header { background: #1660a2; color: #fff; padding: 30px 0; text-align:center; }
-    nav { margin-top: 10px; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight:bold;}
-    .container { max-width: 900px; margin: 40px auto; padding: 20px; background: #fff; box-shadow:0 0 24px #eee;}
-    h2 { color: #1660a2; border-bottom: 1px solid #eee; padding-bottom: 8px; margin-top:24px;}
-    ul { margin: 0 0 0 20px; }
-    .clients { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom:20px;}
-    .client { background: #f8f8fc; border:1px solid #eee; padding:10px 18px; border-radius:8px; font-weight:600;}
-    footer { background: #222; color:#fff; text-align:center; padding:18px 0; margin-top:40px;}
-    .contact { background:#1660a218; padding:18px; border-radius:10px;}
+    :root {
+      --primary: #14559a;
+      --accent: #e9f1ff;
+      --dark: #132135;
+      --light: #ffffff;
+      --bg: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      transition: background 0.3s;
+    }
+    header {
+      background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+      color: var(--light);
+      text-align: center;
+      padding: 48px 18px 36px 18px;
+      box-shadow: 0 4px 24px rgba(20,85,154,0.18);
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin: 0 0 12px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.16);
+    }
+    header p { font-size: 1.2em; margin: 0 0 12px; }
+    nav {
+      margin: 20px 0 0;
+      display: inline-block;
+    }
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 22px;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: background 0.2s, color 0.2s;
+      margin: 0 7px;
+    }
+    nav a.active, nav a:hover {
+      background: var(--light);
+      color: var(--primary);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .container {
+      max-width: 930px;
+      margin: 40px auto;
+      background: var(--light);
+      border-radius: 18px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+      padding: 34px 22px 30px 22px;
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+
+    section { margin-bottom: 42px; }
+    h2 {
+      color: var(--primary);
+      margin: 0 0 8px;
+      font-size: 2em;
+      position: relative;
+    }
+    h2:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 54px;
+      background: var(--accent);
+      margin: 8px 0 0 0;
+      border-radius: 2px;
+    }
+
+    ul {
+      padding-left: 16px;
+      margin: 12px 0 0 0;
+      line-height: 1.6;
+    }
+    .clients {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 20px 0 0 0;
+      justify-content: left;
+    }
+    .client {
+      background: var(--accent);
+      border: 1px solid #d7e6fb;
+      padding: 12px 28px;
+      border-radius: 23px;
+      font-weight: bold;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(20,85,154,0.08);
+      transition: transform 0.1s;
+      cursor: default;
+    }
+    .client:hover { transform: scale(1.05); background: #d7e6fb; }
+
+    .contact {
+      background: var(--accent);
+      border-left: 4px solid var(--primary);
+      padding: 18px 22px;
+      border-radius: 14px;
+      margin-top: 11px;
+      color: var(--dark);
+      font-size: 1.08em;
+    }
+    .contact strong { color: var(--primary); }
+    .contact p { margin: 8px 0; }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--light);
+      font-weight: 700;
+      padding: 12px 34px;
+      border-radius: 7px;
+      text-decoration: none;
+      margin-top: 14px;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(20,85,154,0.11);
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--dark);}
+    footer {
+      background: var(--primary);
+      color: var(--light);
+      text-align: center;
+      padding: 21px 0 16px 0;
+      margin-top: 42px;
+      border-radius: 0 0 10px 10px;
+      font-size: 1em;
+      box-shadow: 0 -2px 12px rgba(20,85,154,0.08);
+    }
+    @media (max-width:900px) { .container {padding:12px;} }
     @media (max-width:600px) {
-      .container { padding:8px; }
-      .clients { flex-direction: column; gap:8px;}
+      header { padding:30px 8px 24px 8px;}
+      header h1 { font-size:2em;}
+      nav a { padding:8px 10px; font-size:0.98em;}
+      .container { padding: 4px;}
+      .clients { flex-direction: column; gap:9px;}
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(34px);}
+      100% { opacity:1; transform: translateY(0);}
+    }
+
+    .fadein {
+      opacity: 0;
+      transform: translateY(38px);
+      transition: all 0.8s cubic-bezier(.52,.01,.28,1);
+    }
+    .fadein.visible {
+      opacity:1;
+      transform:translateY(0);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Karan Collections</h1>
-    <p>Uniform Manufacturer in Jaipur, Rajasthan</p>
+    <p>Uniform Manufacturer | Jaipur, Rajasthan</p>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -34,42 +181,72 @@
     </nav>
   </header>
   <div class="container">
-    <section id="about">
+    <section id="about" class="fadein">
       <h2>About Us</h2>
-      <p>Karan Collections specializes in designing and manufacturing quality uniforms for schools, colleges, hospitals, and institutions across Jaipur and Rajasthan. With years of expertise and a commitment to reliability, we serve clients who value comfort, durability, and brand identity in their uniforms.</p>
+      <p>Karan Collections specializes in quality uniform manufacturing for schools, colleges, hospitals, hotels, and any institution that requires a reliable identity. Our Jaipur-based factory delivers custom designs, ensuring every client’s brand is represented in comfort and style.</p>
     </section>
-    <section id="services">
-      <h2>Our Uniform Services</h2>
+    <section id="services" class="fadein">
+      <h2>Our Services</h2>
       <ul>
-        <li>School Uniforms (shirts, trousers, skirts, tunics, blazers, sweaters)</li>
+        <li>School Uniforms: Shirts, trousers, skirts, tunics, blazers, sweaters</li>
         <li>College & Institutional Uniforms</li>
         <li>Hospital & Medical Staff Uniforms</li>
-        <li>Corporate Uniforms</li>
-        <li>Custom Uniform Design</li>
-        <li>Logo Embroidery & Printing</li>
+        <li>Corporate & Industrial Uniforms</li>
+        <li>Custom Uniform Design & Branding</li>
+        <li>Logo Embroidery & Printed Badges</li>
       </ul>
     </section>
-    <section id="clients">
+    <section id="clients" class="fadein">
       <h2>Notable Clients</h2>
       <div class="clients">
         <div class="client">Maheshwari Girls Public School, Jaipur</div>
         <div class="client">Candlewick School, Jaipur</div>
         <div class="client">Burger Farm</div>
-        <div class="client">Many more schools, hospitals & institutions</div>
+        <div class="client">Plus many more schools, hospitals, hotels & companies</div>
       </div>
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact fadein">
       <h2>Contact Us</h2>
       <p>
         <strong>Address:</strong> Jaipur, Rajasthan<br>
         <strong>Email:</strong> karancollections@example.com<br>
         <strong>Phone:</strong> +91-XXXXX-XXXXX
       </p>
-      <p>We're happy to discuss your requirements and provide samples for your organization. Reach out today for a quote!</p>
+      <p>We'd love to discuss your requirements and share samples or quotes. Reach out today!</p>
+      <a href="mailto:karancollections@example.com" class="btn">Email Us</a>
     </section>
   </div>
   <footer>
-    &copy; 2025 Karan Collections. All rights reserved.
+    &copy; 2025 Karan Collections. All rights reserved. Inspired by best practices in modern portfolio design.
   </footer>
+  <script>
+    // Navigation smooth scroll & highlight
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+        const section = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+          top: section.offsetTop - 20,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Section fade-in on scroll
+    function revealOnScroll() {
+      document.querySelectorAll('.fadein').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 40) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    document.addEventListener('DOMContentLoaded', () => {
+      revealOnScroll();
+      // Activate first nav by default
+      document.querySelector('nav a').classList.add('active');
+    });
+  </script>
 </body>
 </html>
