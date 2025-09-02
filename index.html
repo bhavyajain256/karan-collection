@@ -3,343 +3,273 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karan Collections — Uniform Manufacturers</title>
-  <meta name="description" content="Karan Collections — creative, comfortable, and durable uniforms for schools, colleges, hospitals and corporates. Bulk orders, custom branding, pan‑India delivery." />
+  <title>Karan Collections — Uniforms that define professionalism</title>
+  <meta name="description" content="Karan Collections — creative, comfortable and durable uniforms for schools, colleges, hospitals and corporates. Crafted in India, shipped Pan‑India." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#fff8f2">
   <style>
     :root{
-      --bg:#fff8f2;         /* soft warm background */
-      --card:#ffffff;
+      --bg:#ffffff;
       --muted:#6b7280;
-      --text:#0f172a;
-      --accent:#ff6b6b;     /* coral accent */
-      --accent-2:#4ade80;   /* green accent */
-      --shadow: 0 10px 30px rgba(15,23,42,0.06);
-      --radius:16px;
+      --ink:#0f172a;
+      --teal:#2dd4bf;
+      --coral:#ff6b6b;
+      --card:#ffffff;
       --glass: rgba(255,255,255,0.6);
-      --card-border: rgba(15,23,42,0.06);
-      --container: 1120px;
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(15,23,42,0.06);
+      --maxw:1160px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto; background:var(--bg); color:var(--text); margin:0; -webkit-font-smoothing:antialiased}
-    a{color:inherit; text-decoration:none}
+    html,body{height:100%; margin:0; font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto; color:var(--ink); background:linear-gradient(180deg,#fbfdfd,#ffffff)}
+    a{color:inherit}
 
-    /* layout */
-    .container{width:min(var(--container), 94vw); margin:0 auto}
-    header{position:sticky; top:14px; z-index:40}
-    .nav-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); border-radius:20px; padding:10px 18px; box-shadow:var(--shadow); border:1px solid var(--card-border); backdrop-filter: blur(6px)}
-    nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .brand{display:flex; gap:12px; align-items:center}
-    .logo{width:52px;height:52px;border-radius:12px; background:linear-gradient(135deg,var(--accent),#ffb86b); display:grid;place-items:center;color:white;font-weight:800;font-size:18px;box-shadow:0 6px 18px rgba(255,107,107,0.18)}
-    .brand-name{line-height:1}
-    .brand-name .title{font-weight:700; font-size:1.05rem}
-    .brand-name .sub{font-size:0.75rem; color:var(--muted)}
-    .nav-links{display:flex; gap:14px; align-items:center}
-    .nav-links a{padding:8px 12px; border-radius:10px; color:var(--text); font-weight:600}
-    .nav-links a:hover{background:linear-gradient(90deg, rgba(255,107,107,0.08), rgba(74,222,128,0.05))}
-    .cta-row{display:flex; gap:10px; align-items:center}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:10px 14px; border-radius:999px; font-weight:700; cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff8a80); color:white; box-shadow:0 8px 26px rgba(255,107,107,0.12)}
-    .btn-soft{background:transparent; border:1px solid rgba(15,23,42,0.06); padding:8px 12px; border-radius:12px}
+    /* container */
+    .wrap{width:min(var(--maxw),94vw); margin:32px auto}
+
+    /* header */
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px; background:transparent}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:64px;height:64px;border-radius:14px;display:grid;place-items:center;color:white;font-weight:800;font-size:18px;background:linear-gradient(135deg,var(--teal),var(--coral));box-shadow:0 8px 24px rgba(45,212,191,0.12)}
+    .brand .title{font-weight:700; font-size:1.05rem}
+    nav{display:flex; gap:14px; align-items:center}
+    nav a{padding:8px 12px; border-radius:10px; font-weight:600; color:var(--muted)}
+    nav a:hover{background:rgba(13,18,30,0.04); color:var(--ink)}
+    .cta{display:flex; gap:8px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--coral),#ff8a80); color:white; box-shadow:0 10px 30px rgba(255,107,107,0.08)}
+    .btn-outline{background:transparent;border:1px solid rgba(15,23,42,0.06);}
 
     /* hero */
-    .hero{padding:64px 0 36px}
-    .hero-grid{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center}
-    .hero-card{background:var(--card); border-radius:18px; padding:28px; box-shadow:var(--shadow); border:1px solid var(--card-border)}
-    .hero h1{font-size:clamp(32px,4.6vw,48px); margin:0 0 12px; line-height:1.05}
-    .hero p.lead{color:var(--muted); font-size:1.05rem; margin:0 0 18px}
-    .badges{display:flex; gap:10px; flex-wrap:wrap}
-    .badge{background:linear-gradient(90deg, rgba(255,107,107,0.08), rgba(74,222,128,0.05)); padding:8px 12px; border-radius:999px; font-weight:700; color:var(--text); border:1px solid rgba(15,23,42,0.03)}
+    .hero{position:relative;border-radius:18px; overflow:hidden;margin-top:16px}
+    .hero .media{height:420px; background-image:url('https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c'); background-size:cover; background-position:center}
+    .hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.6));}
+    .hero .content{position:absolute; left:6%; top:16%; max-width:520px; padding:28px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85)); box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
+    .hero h1{font-size:clamp(26px,4.4vw,42px); margin:0 0 10px}
+    .hero p{margin:0 0 18px; color:var(--muted)}
 
-    /* services */
-    .services{padding:28px 0}
-    .service-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
-    .service{background:var(--card); border-radius:14px; padding:20px; text-align:center; box-shadow:var(--shadow); border:1px solid var(--card-border); transition:transform .25s}
-    .service:hover{transform:translateY(-8px)}
-    .service .icon{width:64px;height:64px;border-radius:12px; display:grid; place-items:center; margin:0 auto 12px; font-weight:800}
-    .service h4{margin:0; font-size:1.05rem}
-    .service p{color:var(--muted); font-size:.92rem}
+    /* highlights */
+    .highlights{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:-44px}
+    .card{background:var(--card); border-radius:12px; padding:18px; display:flex; gap:12px; align-items:center; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); transition:transform .2s}
+    .card:hover{transform:translateY(-6px)}
+    .icon{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-weight:800}
+    .card h4{margin:0; font-size:1rem}
+    .card p{margin:0; color:var(--muted); font-size:.92rem}
 
-    /* portfolio */
-    .portfolio{padding:36px 0}
-    .filter-row{display:flex; gap:10px; justify-content:center; margin-bottom:18px}
-    .filter{background:transparent; border:1px solid rgba(15,23,42,0.06); padding:8px 12px; border-radius:999px; cursor:pointer}
-    .filter.active{background:linear-gradient(90deg,var(--accent),#ffb186); color:white; border-color:transparent}
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-    .proj{background:var(--card); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--card-border); transition:transform .25s}
-    .proj:hover{transform:translateY(-8px)}
-    .proj .img{aspect-ratio:4/3; background-size:cover; background-position:center}
-    .proj .meta{padding:14px}
-    .proj .meta h5{margin:0 0 6px}
-    .proj .meta p{margin:0; color:var(--muted); font-size:.9rem}
+    /* portfolio masonry */
+    .portfolio{margin-top:28px}
+    .filters{display:flex; gap:10px; justify-content:center; margin-bottom:16px}
+    .filters button{border-radius:999px; padding:8px 12px; border:1px solid rgba(13,18,30,0.06); background:white; cursor:pointer}
+    .filters button.active{background:linear-gradient(90deg,var(--teal),#4ef1c3); color:white; border-color:transparent}
+    .masonry{column-count:3; column-gap:16px}
+    .m-item{break-inside:avoid; margin-bottom:16px; border-radius:12px; overflow:hidden; position:relative; transition:transform .25s}
+    .m-item img{width:100%; display:block}
+    .m-item .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.32)); opacity:0; transition:opacity .2s}
+    .m-item:hover{transform:translateY(-6px)}
+    .m-item:hover .overlay{opacity:1}
+    .m-item .meta{position:absolute; left:12px; bottom:12px; color:white}
 
-    /* process */
-    .process-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
-    .step{background:var(--card); border-radius:12px; padding:18px; box-shadow:var(--shadow); border:1px solid var(--card-border); text-align:center}
-    .num{width:42px;height:42px;border-radius:10px; display:grid; place-items:center; margin:0 auto 10px; font-weight:700; background:linear-gradient(90deg,var(--accent-2),#60a5fa); color:white}
+    /* testimonials */
+    .why{display:flex; gap:18px; margin-top:28px}
+    .why .panel{flex:1; background:linear-gradient(180deg,#ffffff,#fffdf9); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
 
     /* contact */
-    .contact{padding:36px 0}
-    .contact-grid{display:grid; grid-template-columns:1fr 420px; gap:28px}
-    .form{background:var(--card); padding:22px; border-radius:12px; border:1px solid var(--card-border); box-shadow:var(--shadow)}
-    .form input, .form textarea{width:100%; padding:12px 14px; border-radius:8px; border:1px solid rgba(15,23,42,0.06); margin-bottom:12px; font-family:inherit}
-    .form button{background:linear-gradient(90deg,var(--accent),#ff8a80); color:white; padding:12px 16px; border-radius:10px; border:none; font-weight:700; cursor:pointer}
-    .whatsapp{display:flex; align-items:center; gap:10px; padding:18px; border-radius:12px; background:linear-gradient(90deg,#e6ffef,#ffffff); border:1px solid rgba(15,23,42,0.03)}
+    .contact{display:grid; grid-template-columns:1fr 420px; gap:18px; margin-top:28px}
+    .contact .form{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
+    .form input, .form textarea{width:100%; padding:12px 14px; border-radius:8px; border:1px solid rgba(15,23,42,0.05); margin-bottom:10px; font-family:inherit}
+    .form button{background:linear-gradient(90deg,var(--coral),#ff8a80); color:white; padding:11px 14px; border-radius:10px; border:none; font-weight:700; cursor:pointer}
+    .contact .aside{display:flex; flex-direction:column; gap:12px}
+    .wa{display:flex; gap:12px; align-items:center; padding:12px; border-radius:10px; background:linear-gradient(90deg,#f0fff9,#ffffff); border:1px solid rgba(15,23,42,0.03)}
 
     /* footer */
-    footer{padding:28px 0; color:var(--muted)}
+    footer{margin-top:28px; padding:22px; border-top:1px solid rgba(15,23,42,0.04); color:var(--muted); text-align:center}
 
     /* responsive */
-    @media (max-width: 1000px){
-      .hero-grid, .contact-grid{grid-template-columns:1fr}
-      .service-grid{grid-template-columns:repeat(2,1fr)}
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .process-grid{grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 980px){
+      .highlights{grid-template-columns:repeat(2,1fr)}
+      .masonry{column-count:2}
+      .contact{grid-template-columns:1fr}
     }
-    @media (max-width: 620px){
-      .nav-links{display:none}
-      .logo{width:44px;height:44px}
-      .grid{grid-template-columns:1fr}
-      .service-grid{grid-template-columns:1fr}
+    @media (max-width: 640px){
+      nav{display:none}
+      .masonry{column-count:1}
+      .hero .content{left:6%; top:10%; max-width:90%}
+      .logo{width:52px;height:52px}
     }
 
-    /* subtle animations */
-    .reveal{opacity:0; transform:translateY(12px); transition:all .6s cubic-bezier(.2,.9,.3,1)}
-    .reveal.show{opacity:1; transform:none}
+    /* subtle reveal */
+    .fade{opacity:0; transform:translateY(12px); transition:all .6s ease}
+    .fade.show{opacity:1; transform:none}
   </style>
 </head>
 <body>
-  <div style="padding:18px 0">
-    <div class="container">
-      <header>
-        <div class="nav-wrap">
-          <nav>
-            <div class="brand">
-              <div class="logo">KC</div>
-              <div class="brand-name">
-                <div class="title">Karan Collections</div>
-                <div class="sub">Uniforms • Schools • Hospitals • Corporate</div>
-              </div>
-            </div>
-            <div class="nav-links">
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="#contact">Contact</a>
-            </div>
-            <div class="cta-row">
-              <a class="btn btn-soft" href="mailto:sales@karancollections.in">Email</a>
-              <a class="btn btn-primary" href="#contact">Get Quote</a>
-            </div>
-          </nav>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">KC</div>
+        <div>
+          <div class="title">Karan Collections</div>
+          <div style="font-size:12px; color:var(--muted)">Uniforms • Schools • Hospitals • Corporate</div>
         </div>
-      </header>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-outline" href="mailto:sales@karancollections.in">Email</a>
+        <a class="btn btn-primary" href="#contact">Get Quote</a>
+      </div>
+    </header>
 
-      <!-- HERO -->
-      <section class="hero">
-        <div class="hero-grid">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="media"></div>
+      <div class="overlay"></div>
+      <div class="content fade">
+        <h1>Uniforms that define professionalism</h1>
+        <p>Comfortable, durable and thoughtfully designed uniforms for schools, colleges, hospitals and corporates. Fast sampling and scalable production.</p>
+        <div style="display:flex; gap:10px; align-items:center">
+          <a class="btn btn-primary" href="#contact">Request a Quote</a>
+          <a class="btn btn-outline" href="#portfolio">Explore Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights fade">
+      <div class="card">
+        <div class="icon" style="background:linear-gradient(135deg,#e6fffb,#f0fff9); color:var(--teal)">🎒</div>
+        <div>
+          <h4>Schools</h4>
+          <p>Durable sets, seasonal & boarding wear with consistent sizing.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon" style="background:linear-gradient(135deg,#fff0f0,#fff8f7); color:var(--coral)">🏥</div>
+        <div>
+          <h4>Hospitals</h4>
+          <p>Hygienic scrubs, lab coats and patient wear with easy-care fabrics.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon" style="background:linear-gradient(135deg,#fffaf0,#fffdfb); color:#f59e0b">💼</div>
+        <div>
+          <h4>Corporate</h4>
+          <p>Polos, shirts and branded outerwear for on-field and office teams.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon" style="background:linear-gradient(135deg,#f5f3ff,#fbfbff); color:#6c63ff">🎓</div>
+        <div>
+          <h4>Colleges</h4>
+          <p>Stylish, practical sets for campus life — formal & semi-formal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio fade">
+      <div style="text-align:center"><h3 style="margin:0;">Portfolio</h3><p style="color:var(--muted)">Selected projects and sample styles</p></div>
+      <div class="filters" style="margin-top:12px">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="school">School</button>
+        <button data-filter="hospital">Hospital</button>
+        <button data-filter="corporate">Corporate</button>
+        <button data-filter="college">College</button>
+      </div>
+
+      <div class="masonry" id="masonry">
+        <div class="m-item" data-cat="school"><img src="https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c" alt="School uniforms"><div class="overlay"></div><div class="meta"><strong>Modern School Set</strong></div></div>
+        <div class="m-item" data-cat="hospital"><img src="https://images.unsplash.com/photo-1582719478179-1864d9d4df2b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=76b9ef2e6a1d4b2c2c5b1a1b0f3e9b2c" alt="Hospital scrubs"><div class="overlay"></div><div class="meta"><strong>Comfort Scrubs</strong></div></div>
+        <div class="m-item" data-cat="corporate"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d" alt="Corporate polos"><div class="overlay"></div><div class="meta"><strong>Corporate Polo</strong></div></div>
+        <div class="m-item" data-cat="college"><img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c" alt="Campus blazer"><div class="overlay"></div><div class="meta"><strong>Campus Blazer</strong></div></div>
+        <div class="m-item" data-cat="school"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=9e8b7a6c5d4f3e2a1b0c9d8e7f6a5b4c" alt="Blazer"><div class="overlay"></div><div class="meta"><strong>Winter Blazer</strong></div></div>
+        <div class="m-item" data-cat="hospital"><img src="https://images.unsplash.com/photo-1581091870623-3c9f2d7f5a1a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="Lab coat"><div class="overlay"></div><div class="meta"><strong>Lab Coat</strong></div></div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="why fade">
+      <div class="panel">
+        <h3 style="margin-top:0">Why Karan Collections</h3>
+        <ul style="color:var(--muted); line-height:1.6">
+          <li><strong>Quality first:</strong> In‑house QC and certified fabrics.</li>
+          <li><strong>Scalable production:</strong> From 50 sets to bulk enterprise orders.</li>
+          <li><strong>Custom branding:</strong> Embroidery, prints and packaging as required.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 style="margin-top:0">Testimonials</h3>
+        <blockquote style="margin:0; color:var(--muted)">"Reliable delivery and consistent sizing — our students love the comfort." — St. Xavier's School</blockquote>
+        <p style="margin-top:12px; color:var(--muted)">References available on request.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade">
+      <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="company" placeholder="Institution / Company" required>
+        <input type="text" name="name" placeholder="Contact Person" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone (with country code)" required>
+        <textarea name="message" rows="4" placeholder="Brief: sizes, styles, branding, timeline"></textarea>
+        <div style="display:flex; gap:10px; align-items:center">
+          <button type="submit">Send Enquiry</button>
+          <a class="btn btn-outline" href="mailto:sales@karancollections.in">Email Us</a>
+        </div>
+      </form>
+
+      <aside class="aside">
+        <div class="wa">
+          <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#e6fff7,#ffffff);display:grid;place-items:center;font-weight:800;color:var(--teal)">WA</div>
           <div>
-            <div class="hero-card reveal">
-              <div class="badges">
-                <div class="badge">Pan‑India Delivery</div>
-                <div class="badge">Bulk Orders</div>
-                <div class="badge">Custom Branding</div>
-              </div>
-              <h1 style="margin-top:18px">Beautifully crafted uniforms — designed for comfort & confidence</h1>
-              <p class="lead">We design, stitch and deliver uniforms for educational institutions, hospitals, and corporate teams. Fast sampling, consistent sizing, and reliable delivery.</p>
-              <div style="display:flex; gap:12px; align-items:center">
-                <a class="btn btn-primary" href="#contact">Request a Quote</a>
-                <a class="btn btn-soft" href="#portfolio">View Portfolio</a>
-              </div>
-            </div>
-          </div>
-
-          <aside>
-            <div class="hero-card reveal" style="display:flex;flex-direction:column;gap:12px;">
-              <div style="display:flex;align-items:center;justify-content:space-between">
-                <div>
-                  <div style="font-weight:700">Quick Facts</div>
-                  <div style="color:var(--muted); font-size:.95rem">Fast turnarounds, sample approvals, and scalable production.</div>
-                </div>
-                <div style="text-align:right; font-weight:700; color:var(--accent)">MOQ 50 sets</div>
-              </div>
-
-              <div style="display:flex; gap:10px; margin-top:8px">
-                <div style="flex:1; background:linear-gradient(180deg,#fff,#f7fbf8); padding:12px; border-radius:12px; border:1px solid rgba(15,23,42,0.03); text-align:center">
-                  <div style="font-weight:800; font-size:1.1rem">50k+</div>
-                  <div style="color:var(--muted); font-size:.85rem">Garments/Year</div>
-                </div>
-                <div style="flex:1; background:linear-gradient(180deg,#fff,#fff8f8); padding:12px; border-radius:12px; border:1px solid rgba(15,23,42,0.03); text-align:center">
-                  <div style="font-weight:800; font-size:1.1rem">25+</div>
-                  <div style="color:var(--muted); font-size:.85rem">Institutions</div>
-                </div>
-              </div>
-
-              <small style="color:var(--muted)">*Lead time depends on quantity and customization.</small>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section id="services" class="services reveal">
-        <div class="container">
-          <h3 style="text-align:center">Our Services</h3>
-          <div class="service-grid" style="margin-top:18px">
-            <div class="service">
-              <div class="icon" style="background:linear-gradient(135deg,#ffe6e6,#fff0f0); color:var(--accent)">👔</div>
-              <h4>Schools</h4>
-              <p>Durable school sets, blazers, seasonal wear and boarding supplies tailored to fit.</p>
-            </div>
-            <div class="service">
-              <div class="icon" style="background:linear-gradient(135deg,#e6fff6,#f0fff9); color:var(--accent-2)">🏥</div>
-              <h4>Hospitals</h4>
-              <p>Hygienic scrubs, lab coats and patient wear with optional anti‑microbial finishes.</p>
-            </div>
-            <div class="service">
-              <div class="icon" style="background:linear-gradient(135deg,#fff7e6,#fffdf5); color:#ffb86b">💼</div>
-              <h4>Corporate</h4>
-              <p>Polo shirts, shirts, and corporate attire with branding & uniforms for field staff.</p>
-            </div>
-            <div class="service">
-              <div class="icon" style="background:linear-gradient(135deg,#f0f3ff,#f9faff); color:#6c63ff">🎓</div>
-              <h4>Colleges</h4>
-              <p>Formal and semi‑formal sets designed to combine style and function for campus life.</p>
-            </div>
+            <div style="font-weight:700">+91‑XXXXXXXXXX</div>
+            <div style="color:var(--muted); font-size:.95rem">Quick enquiries & sample requests</div>
           </div>
         </div>
-      </section>
 
-      <!-- PORTFOLIO -->
-      <section id="portfolio" class="portfolio reveal">
-        <div class="container">
-          <h3 style="text-align:center">Portfolio</h3>
-          <div class="filter-row" style="margin-top:14px">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="school">School</button>
-            <button class="filter" data-filter="hospital">Hospital</button>
-            <button class="filter" data-filter="corporate">Corporate</button>
-            <button class="filter" data-filter="college">College</button>
-          </div>
-
-          <div class="grid" id="projects">
-            <article class="proj" data-cat="school">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1526420435091-1a1b0a7b2f48?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5b9f0a1d2f4b9c3a1e3df0a8f3f7f1b4')"></div>
-              <div class="meta"><h5>Modern School Set</h5><p>Shirts & trousers with embroidered crest.</p></div>
-            </article>
-            <article class="proj" data-cat="hospital">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1582719478179-1864d9d4df2b?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=76b9ef2e6a1d4b2c2c5b1a1b0f3e9b2c')"></div>
-              <div class="meta"><h5>Comfort Scrubs</h5><p>Lightweight scrub sets with reinforced stitching.</p></div>
-            </article>
-            <article class="proj" data-cat="corporate">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d')"></div>
-              <div class="meta"><h5>Corporate Polo</h5><p>Branded polos with reverse‑seam detailing.</p></div>
-            </article>
-            <article class="proj" data-cat="college">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c')"></div>
-              <div class="meta"><h5>Campus Blazer</h5><p>Lightweight blazers with crisp lapels.</p></div>
-            </article>
-            <article class="proj" data-cat="school">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9e8b7a6c5d4f3e2a1b0c9d8e7f6a5b4c')"></div>
-              <div class="meta"><h5>Winter Blazer</h5><p>Wool blend blazers for winter uniforms.</p></div>
-            </article>
-            <article class="proj" data-cat="hospital">
-              <div class="img" style="background-image:url('https://images.unsplash.com/photo-1581091870623-3c9f2d7f5a1a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d')"></div>
-              <div class="meta"><h5>Lab Coat</h5><p>Durable lab coats with easy‑care fabric.</p></div>
-            </article>
-          </div>
+        <div style="background:linear-gradient(180deg,#ffffff,#fffaf7); padding:12px; border-radius:10px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
+          <strong>Location</strong>
+          <p style="margin:6px 0 0; color:var(--muted)">Jaipur, Rajasthan • Pan‑India dispatch</p>
         </div>
-      </section>
 
-      <!-- PROCESS -->
-      <section class="reveal" style="padding-bottom:18px">
-        <div class="container">
-          <h3 style="text-align:center">Our Process</h3>
-          <div class="process-grid" style="margin-top:18px">
-            <div class="step"><div class="num">1</div><strong>Brief</strong><p style="color:var(--muted)">Tell us quantity, sizes & branding.</p></div>
-            <div class="step"><div class="num">2</div><strong>Sample</strong><p style="color:var(--muted)">Approve fabric & fit with samples.</p></div>
-            <div class="step"><div class="num">3</div><strong>Produce</strong><p style="color:var(--muted)">Cut, stitch & inspect with QC.</p></div>
-            <div class="step"><div class="num">4</div><strong>Deliver</strong><p style="color:var(--muted)">Pack & ship with tracking.</p></div>
-          </div>
+        <div style="background:linear-gradient(180deg,#fff,#fffdfb); padding:12px; border-radius:10px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); text-align:center">
+          <strong>Ready to start?</strong>
+          <p style="margin:6px 0 10px; color:var(--muted)">We can ship samples within 7–10 days.</p>
+          <a class="btn btn-primary" href="#contact">Request Sample</a>
         </div>
-      </section>
+      </aside>
+    </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="contact reveal">
-        <div class="container">
-          <h3 style="text-align:center">Get a Quote</h3>
-          <div class="contact-grid" style="margin-top:18px">
-            <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
-              <input type="text" name="company" placeholder="Institution / Company" required>
-              <input type="text" name="name" placeholder="Contact Person" required>
-              <input type="email" name="email" placeholder="Email" required>
-              <input type="tel" name="phone" placeholder="Phone (with country code)" required>
-              <input type="text" name="quantity" placeholder="Approx. Quantity (e.g., 300 sets)">
-              <textarea name="message" rows="4" placeholder="Brief: sizes, styles, branding, timeline"></textarea>
-              <div style="display:flex; gap:10px; align-items:center">
-                <button type="submit">Send Enquiry</button>
-                <a class="btn btn-soft" href="mailto:sales@karancollections.in">Email Us</a>
-              </div>
-            </form>
-
-            <aside>
-              <div style="display:flex;flex-direction:column;gap:12px">
-                <div class="hero-card reveal" style="padding:16px">
-                  <strong>WhatsApp</strong>
-                  <div style="display:flex;align-items:center;gap:10px;margin-top:8px">
-                    <div style="width:48px;height:48px;border-radius:10px;background:#e6fff2;display:grid;place-items:center;font-weight:800;color:var(--accent-2)">WA</div>
-                    <div>
-                      <div style="font-weight:700">+91‑XXXXXXXXXX</div>
-                      <div style="color:var(--muted); font-size:.95rem">Quick enquiries & samples</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hero-card reveal" style="padding:16px">
-                  <strong>Location</strong>
-                  <p style="color:var(--muted); font-size:.95rem; margin-top:8px">Jaipur, Rajasthan • Pan‑India dispatch</p>
-                </div>
-
-                <div class="hero-card reveal" style="padding:16px; text-align:center">
-                  <strong>Ready to start?</strong>
-                  <p style="color:var(--muted)">We can ship samples within 7‑10 days.</p>
-                  <a class="btn btn-primary" href="#contact">Request Sample</a>
-                </div>
-              </div>
-            </aside>
-          </div>
+    <footer>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+        <div>
+          <strong>Karan Collections</strong><br>
+          <small style="color:var(--muted)">Uniform manufacturers — Schools • Hospitals • Corporates</small>
         </div>
-      </section>
-
-      <footer class="reveal" style="margin-top:26px">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-          <div>
-            <strong>Karan Collections</strong><br>
-            <small style="color:var(--muted)">Uniform manufacturers — Schools • Hospitals • Corporates</small>
-          </div>
-          <div style="color:var(--muted)">© 2025 Karan Collections. All rights reserved.</div>
-        </div>
-      </footer>
-    </div>
+        <div style="color:var(--muted)">© 2025 Karan Collections</div>
+      </div>
+    </footer>
   </div>
 
   <script>
-    // Reveal on scroll
+    // reveal
+    const reveals = document.querySelectorAll('.fade');
     const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('show'); });
     },{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    reveals.forEach(r=>io.observe(r));
 
-    // Portfolio filter
-    document.querySelectorAll('.filter').forEach(btn=>{
+    // filters
+    document.querySelectorAll('.filters button').forEach(btn=>{
       btn.addEventListener('click',()=>{
-        document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
         const f = btn.dataset.filter;
-        document.querySelectorAll('#projects .proj').forEach(p=>{
-          p.style.display = (f==='all' || p.dataset.cat===f) ? '' : 'none';
+        document.querySelectorAll('.m-item').forEach(item=>{
+          item.style.display = (f==='all' || item.dataset.cat===f) ? '' : 'none';
         });
       });
     });
