@@ -1,257 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Karan Collections | Uniform Manufacturer</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karan Collections — Uniforms that define professional identity</title>
+  <meta name="description" content="Karan Collections — Manufacturers of uniforms for schools, colleges, hospitals and corporates. Bulk orders, PAN‑India delivery, custom branding and samples." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#fff8f0">
   <style>
-    :root {
-      --main: #14559a;
-      --main-dark: #0f2f54;
-      --accent: #e3f0ff;
-      --brand: #ffca27;
-      --border: #e7e9ef;
-      --radius: 14px;
+    :root{
+      --bg:#fbfbfb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ink:#0f172a;
+      --accent-1:#07b7a8; /* teal */
+      --accent-2:#ff6b6b; /* coral */
+      --radius:14px;
+      --shadow: 0 12px 30px rgba(15,23,42,0.06);
+      --container:1200px;
     }
-    * {box-sizing: border-box;}
-    body {margin:0;font-family:'Montserrat',Arial,sans-serif;background:var(--accent);color:var(--main-dark);}
-    header {
-      min-height:480px;
-      background: linear-gradient(105deg, var(--main) 63%, var(--brand) 100%);
-      display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
-      color:#fff; position:relative; border-bottom-left-radius:80px;
-      overflow:hidden;
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto; margin:0; color:var(--ink); background:linear-gradient(180deg,#ffffff,var(--bg)); -webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{width:min(var(--container),94vw); margin:32px auto}
+
+    /* Header */
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px; position:sticky; top:14px; z-index:50}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;color:white;font-weight:800;font-size:20px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2)); box-shadow:0 10px 26px rgba(7,183,168,0.12)}
+    nav{display:flex; gap:14px; align-items:center}
+    nav a{padding:8px 12px; border-radius:10px; font-weight:600; color:var(--muted)}
+    nav a:hover{background:rgba(15,23,42,0.04); color:var(--ink)}
+    .actions{display:flex; gap:8px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; font-weight:700; cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-2),#ff8a80); color:white; box-shadow:0 10px 30px rgba(255,107,107,0.08)}
+    .btn-ghost{border:1px solid rgba(15,23,42,0.06); background:white}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns: 1fr 420px; gap:24px; align-items:center; margin-top:12px}
+    .hero-media{height:520px; border-radius:18px; overflow:hidden; position:relative; box-shadow:var(--shadow)}
+    .hero-media img{width:100%; height:100%; object-fit:cover; display:block}
+    .hero-card{background:var(--card); border-radius:18px; padding:26px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
+    .kicker{display:inline-block; padding:6px 10px; border-radius:999px; background:linear-gradient(90deg,#f0fff9,#ffffff); border:1px solid rgba(15,23,42,0.03); color:var(--muted); font-weight:700}
+    h1{font-size:clamp(28px,4vw,42px); margin:12px 0 8px}
+    p.lead{margin:0 0 18px; color:var(--muted); font-size:1.05rem}
+
+    /* quick stats */
+    .stats{display:flex; gap:12px; margin-top:14px}
+    .stat{background:linear-gradient(180deg,#fff,#f9fff9); padding:12px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.03); min-width:120px; text-align:center}
+    .stat strong{display:block; font-size:1.05rem}
+    .stat small{color:var(--muted)}
+
+    /* Categories */
+    .cats{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px}
+    .cat{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); display:flex; gap:12px; align-items:center; cursor:pointer; transition:transform .18s}
+    .cat:hover{transform:translateY(-6px)}
+    .cat .ic{width:56px;height:56px;border-radius:10px; display:grid;place-items:center; font-weight:800}
+    .cat h4{margin:0}
+    .cat p{margin:0; color:var(--muted); font-size:.95rem}
+
+    /* Featured products */
+    .products{margin-top:30px}
+    .prod-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .product{background:var(--card); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); transition:transform .2s}
+    .product:hover{transform:translateY(-8px)}
+    .product img{width:100%; height:220px; object-fit:cover; display:block}
+    .product .body{padding:14px}
+    .product h5{margin:0 0 6px}
+    .product p{margin:0; color:var(--muted); font-size:.95rem}
+    .product .meta{display:flex; justify-content:space-between; align-items:center; margin-top:12px}
+
+    /* trust logos */
+    .trust{display:flex; gap:18px; align-items:center; justify-content:center; margin-top:26px; flex-wrap:wrap}
+    .trust img{height:32px; opacity:.85}
+
+    /* portfolio masonry */
+    .portfolio{margin-top:36px}
+    .portfolio h3{margin-bottom:6px}
+    .masonry{column-count:3; column-gap:12px}
+    .masonry .item{break-inside:avoid; margin-bottom:12px; border-radius:12px; overflow:hidden; position:relative}
+    .masonry .item img{width:100%; display:block}
+    .masonry .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.34)); opacity:0; transition:opacity .18s}
+    .masonry .item:hover .overlay{opacity:1}
+    .masonry .meta{position:absolute; left:12px; bottom:12px; color:white}
+
+    /* contact */
+    .contact{display:grid; grid-template-columns:1fr 360px; gap:18px; margin-top:36px}
+    .form{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
+    .form input, .form textarea{width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(15,23,42,0.06); margin-bottom:10px}
+    .form button{background:linear-gradient(90deg,var(--accent-1),#49d9bc); color:white; padding:12px 14px; border-radius:10px; border:none; font-weight:700; cursor:pointer}
+    .aside{display:flex; flex-direction:column; gap:12px}
+    .wa{display:flex; gap:12px; align-items:center; padding:12px; border-radius:12px; background:linear-gradient(90deg,#f0fff9,#ffffff); border:1px solid rgba(15,23,42,0.03)}
+
+    /* footer */
+    footer{margin-top:36px; padding:28px 0; border-top:1px solid rgba(15,23,42,0.04); color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:1060px){
+      .hero{grid-template-columns:1fr}
+      .cats{grid-template-columns:repeat(2,1fr)}
+      .prod-grid{grid-template-columns:repeat(2,1fr)}
+      .masonry{column-count:2}
+      .contact{grid-template-columns:1fr}
     }
-    header h1 {
-      font-size:3em;
-      font-weight:700;
-      margin:44px 0 10px; letter-spacing:2px;
-      text-shadow: 0 2px 18px #0f2f5444;
+    @media (max-width:640px){
+      nav{display:none}
+      .wrap{margin:18px}
+      .logo{width:56px;height:56px}
+      .masonry{column-count:1}
+      .prod-grid{grid-template-columns:1fr}
+      .cats{grid-template-columns:1fr}
     }
-    header p {
-      font-size:1.25em;
-      margin:0 0 8px 0;
-      letter-spacing:1px;
-    }
-    .hero-btn {
-      background: var(--brand);
-      color: var(--main-dark);
-      font-weight: 700;
-      font-size:1.12em;
-      padding:16px 38px;
-      border:none;
-      border-radius:28px;
-      margin-top:24px;
-      cursor:pointer;
-      box-shadow: 0 4px 14px #0f2f5428;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .hero-btn:hover {background:#fff;transform:scale(1.04);}
-    nav {
-      position:absolute;
-      top:24px; left:0; width:100%; text-align:center;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      padding:10px 30px;
-      border-radius:30px;
-      margin:0 7px;
-      font-weight:700;
-      font-size:1em;
-      background:rgba(20,85,154,0.13);
-      transition:background 0.2s,color 0.2s;
-    }
-    nav a.active, nav a:hover {background:#fff;color:var(--main);}
-    .main {max-width:1050px;margin:38px auto;padding:22px;background:#fff;border-radius:var(--radius);box-shadow:0 2px 34px #0f2f5420;}
-    .section {margin-bottom:62px;}
-    .card-group {display:flex;flex-wrap:wrap;gap:38px;justify-content:center;}
-    .service-card {
-      background: var(--accent);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      flex-basis:240px;
-      padding:36px 22px 34px 22px;
-      box-shadow:0 2px 18px #14559a0d;
-      text-align:center;
-      font-weight:500;
-      transition:transform 0.16s;
-    }
-    .service-card:hover {transform:scale(1.035);}
-    .service-card .icon {
-      font-size:2.7em;
-      margin-bottom:12px;
-      color:var(--main);
-    }
-    h2 {
-      font-size:2.2em;
-      font-weight:700;
-      color:var(--main);
-      margin:0 0 15px;
-      position:relative;
-      display:inline-block;
-      border-bottom:4px solid var(--accent);
-      padding-bottom:2px;
-      letter-spacing:1px;
-    }
-    .clients {
-      display:flex;flex-wrap:wrap;gap:28px;justify-content:left;align-items:center;margin-top:18px;
-    }
-    .client-logo {
-      background:#fff;
-      border:2px solid var(--border);
-      border-radius:var(--radius);
-      width:138px;
-      height:80px;
-      display:flex;align-items:center;justify-content: center;
-      font-weight:bold;
-      color:var(--main-dark);
-      box-shadow:0 2px 12px #14559a17;
-      font-size:1.02em;
-      margin-bottom:9px;
-    }
-    .plus {background:var(--accent);}
-    .contact-card {
-      background:var(--accent);
-      border-left:8px solid var(--main);
-      border-radius:var(--radius);
-      padding:32px 28px;
-      font-size:1.13em;
-      color:var(--main-dark);
-      box-shadow:0 2px 10px #0f2f5410;
-    }
-    .contact-card strong {color:var(--main);}
-    .contact-card a {
-      display:inline-block;
-      background: var(--main);
-      color: #fff;
-      padding:13px 36px;
-      border-radius:20px;
-      text-decoration:none;
-      font-weight:700;
-      font-size:1em;
-      margin-top:18px;
-      transition:background 0.18s;
-    }
-    .contact-card a:hover {background:#ffca27;color:var(--main-dark);}
-    footer {
-      text-align:center;
-      padding:32px 6px 20px 6px;
-      background:var(--main-dark);
-      color:#fff;
-      font-size:1.07em;
-      border-top-left-radius:42px;
-      margin-top:60px;
-      box-shadow:0 -2px 18px #0f2f541a;
-    }
-    @media(max-width:1020px){
-      .main{padding:14px;}
-      .card-group{gap:18px;}
-      .client-logo{width:100px;}
-    }
-    @media(max-width:700px){
-      header{min-height:370px;}
-      header h1{font-size:2em;}
-      nav a {padding:10px 12px;}
-      .main{padding:4px;}
-      .card-group{flex-direction:column;gap:18px;}
-      .clients{gap:9px;}
-      .client-logo{height:55px;width:88px;font-size:0.97em;}
-      footer{padding:18px 2px;}
-    }
-    .fade {opacity:0;transform:translateY(40px);transition:all 0.62s cubic-bezier(.56,.11,.49,.99);}
-    .fade.visible {opacity:1;transform:translateY(0);}
+
+    /* reveal */
+    .reveal{opacity:0; transform:translateY(12px); transition:all .6s cubic-bezier(.2,.9,.3,1)}
+    .reveal.show{opacity:1; transform:none}
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#about" class="active">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <h1>Karan Collections</h1>
-    <p>Uniforms inspired by international trends.<br/>Quality, comfort and style for your brand ambassadors.</p>
-    <button class="hero-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Get a Quote</button>
-  </header>
-  <div class="main">
-    <section id="about" class="fade section">
-      <h2>About Us</h2>
-      <p>Karan Collections celebrates the art and science of uniform design. Based in Jaipur, Rajasthan, we bring modern style and practical comfort to schools, colleges, hospitals, hotels and businesses. Much like global leaders, our focus is to make employees true brand ambassadors through tailored fit, durable fabrics, and striking details.<br><br>
-      From smart school uniforms to elegant hospitality wear, our team delivers on design, delivery, and competitive pricing.</p>
-    </section>
-    <section id="services" class="fade section">
-      <h2>Our Services</h2>
-      <div class="card-group">
-        <div class="service-card">
-          <span class="icon">&#128188;</span>
-          School & College Uniforms
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">KC</div>
+        <div>
+          <div style="font-weight:700">Karan Collections</div>
+          <div style="font-size:12px; color:var(--muted)">Uniforms • Schools • Hospitals • Corporate</div>
         </div>
-        <div class="service-card">
-          <span class="icon">&#127973;</span>
-          Hospital & Medical Uniforms
+      </div>
+
+      <nav>
+        <a href="#categories">Categories</a>
+        <a href="#featured">Featured</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-ghost" href="tel:+919210008549">Call: +91 9210 008 549</a>
+        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-media" aria-hidden>
+        <img src="https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c" alt="Uniforms banner">
+      </div>
+
+      <div class="hero-card reveal">
+        <span class="kicker">Custom Uniforms</span>
+        <h1>Uniforms that define professional identity</h1>
+        <p class="lead">We make uniforms for schools, colleges, hospitals and corporates — thoughtful fabrics, consistent sizing and on‑time delivery across India.</p>
+
+        <div class="stats">
+          <div class="stat"><strong>10,000+</strong><small>Happy customers</small></div>
+          <div class="stat"><strong>25+</strong><small>Industries served</small></div>
+          <div class="stat"><strong>9000+</strong><small>Pin codes reached</small></div>
         </div>
-        <div class="service-card">
-          <span class="icon">&#127859;</span>
-          Hotel & Restaurant Uniforms
+
+        <div style="margin-top:18px; display:flex; gap:10px; align-items:center">
+          <a class="btn btn-primary" href="#contact">Request a Callback</a>
+          <a class="btn btn-ghost" href="#featured">Shop Samples</a>
         </div>
-        <div class="service-card">
-          <span class="icon">&#128095;</span>
-          Corporate & Industrial Workwear
-        </div>
-        <div class="service-card">
-          <span class="icon">&#10024;</span>
-          Custom Design & Branding
+
+        <div style="margin-top:18px; color:var(--muted)">
+          <small>ISO 9001:2015 • Bulk discounts • 7‑day exchanges</small>
         </div>
       </div>
     </section>
-    <section id="clients" class="fade section">
-      <h2>Our Clients</h2>
-      <div class="clients">
-        <div class="client-logo">Maheshwari Girls Public School</div>
-        <div class="client-logo">Candlewick School</div>
-        <div class="client-logo">Burger Farm</div>
-        <div class="client-logo plus">Many More...</div>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="reveal">
+      <h3 style="margin:0 0 8px">Top Categories</h3>
+      <p style="margin:0 0 16px; color:var(--muted)">Explore our collections by industry</p>
+      <div class="cats">
+        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#e6fffb,#f0fff9); color:var(--accent-1)">🎒</div><div><h4>School Uniforms</h4><p>Shirts, trousers, skirts & blazers with embroidered crests.</p></div></div>
+        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#fff0f0,#fff8f8); color:var(--accent-2)">🏥</div><div><h4>Hospital Uniforms</h4><p>Scrubs, lab coats & patient wear with easy-care fabrics.</p></div></div>
+        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#fffaf0,#fffdfb); color:#f59e0b">💼</div><div><h4>Corporate Wear</h4><p>Polos, shirts, jackets and branding for on-duty staff.</p></div></div>
+        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#f5f3ff,#fbfbff); color:#6c63ff">🎓</div><div><h4>College Attire</h4><p>Formal and semi-formal sets for campus life and events.</p></div></div>
       </div>
     </section>
-    <section id="contact" class="fade section">
-      <h2>Contact</h2>
-      <div class="contact-card">
-        <p><strong>Address:</strong> Jaipur, Rajasthan<br/>
-        <strong>Email:</strong> karancollections@example.com<br/>
-        <strong>Phone:</strong> +91-XXXXX-XXXXX</p>
-        <p>Let's create your brand's look together. From concept to delivery, Karan Collections is your reliable uniform partner.</p>
-        <a href="mailto:karancollections@example.com">Request Sample/Quote</a>
+
+    <!-- FEATURED PRODUCTS -->
+    <section id="featured" class="products reveal">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+        <h3 style="margin:0">Featured Products</h3>
+        <div style="color:var(--muted); font-size:.95rem">Shop samples & small batches</div>
+      </div>
+      <div class="prod-grid" style="margin-top:12px">
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d" alt="Polo">
+          <div class="body">
+            <h5>Corporate Polo</h5>
+            <p>Breathable piqué fabric with logo embroidery.</p>
+            <div class="meta"><small style="color:var(--muted)">MOQ: 50</small><strong>From ₹199</strong></div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c" alt="Blazer">
+          <div class="body">
+            <h5>Campus Blazer</h5>
+            <p>Lightweight wool blend with crisp lapels.</p>
+            <div class="meta"><small style="color:var(--muted)">MOQ: 30</small><strong>Custom quote</strong></div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="https://images.unsplash.com/photo-1582719478179-1864d9d4df2b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=76b9ef2e6a1d4b2c2c5b1a1b0f3e9b2c" alt="Scrub">
+          <div class="body">
+            <h5>Comfort Scrub</h5>
+            <p>Soft, durable fabric with reinforced stitching.</p>
+            <div class="meta"><small style="color:var(--muted)">MOQ: 50</small><strong>From ₹349</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trust">
+        <img src="https://dummyimage.com/120x32/fff/aaa&text=School+Logo" alt="logo">
+        <img src="https://dummyimage.com/120x32/fff/aaa&text=Hospital+Logo" alt="logo">
+        <img src="https://dummyimage.com/120x32/fff/aaa&text=Brand+Logo" alt="logo">
+        <img src="https://dummyimage.com/120x32/fff/aaa&text=College+Logo" alt="logo">
       </div>
     </section>
+
+    <!-- PORTFOLIO MASONRY -->
+    <section id="portfolio" class="portfolio reveal">
+      <h3 style="margin:0">Portfolio</h3>
+      <p style="margin:6px 0 12px; color:var(--muted)">Real projects we delivered for institutions across India</p>
+      <div class="masonry">
+        <div class="item"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=9e8b7a6c5d4f3e2a1b0c9d8e7f6a5b4c" alt="winter blazer"><div class="overlay"></div><div class="meta"><strong>Winter Blazers</strong></div></div>
+        <div class="item"><img src="https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c" alt="students"><div class="overlay"></div><div class="meta"><strong>School Sets</strong></div></div>
+        <div class="item"><img src="https://images.unsplash.com/photo-1581091870623-3c9f2d7f5a1a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="lab coat"><div class="overlay"></div><div class="meta"><strong>Lab Coats</strong></div></div>
+        <div class="item"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d" alt="polo shirts"><div class="overlay"></div><div class="meta"><strong>Polo Range</strong></div></div>
+        <div class="item"><img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c" alt="blazer"><div class="overlay"></div><div class="meta"><strong>College Blazers</strong></div></div>
+      </div>
+    </section>
+
+    <!-- WHY / TESTIMONIALS -->
+    <section id="why" class="reveal" style="margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:18px">
+      <div style="background:linear-gradient(180deg,#fff,#fffdf9); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
+        <h3 style="margin-top:0">Why Choose Us</h3>
+        <ul style="color:var(--muted); line-height:1.8">
+          <li><strong>Quality Assurance:</strong> Multiple QC stages and fabric testing.</li>
+          <li><strong>Flexible MOQs:</strong> Starting from 30–50 sets for schools and corporates.</li>
+          <li><strong>Branding Options:</strong> Embroidery, screen print and packaging.</li>
+        </ul>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <div style="background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
+          <strong>"Excellent quality & timely delivery"</strong>
+          <p style="margin:8px 0 0; color:var(--muted)">— St. Xavier's School</p>
+        </div>
+        <div style="background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
+          <strong>"Very responsive team and good samples"</strong>
+          <p style="margin:8px 0 0; color:var(--muted)">— CityCare Hospital</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h3 style="margin-bottom:8px">Get in touch / Request a Callback</h3>
+      <div class="contact">
+        <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+          <input name="company" type="text" placeholder="Institution / Company" required>
+          <input name="name" type="text" placeholder="Contact person" required>
+          <input name="email" type="email" placeholder="Email" required>
+          <input name="phone" type="tel" placeholder="Phone (with country code)" required>
+          <textarea name="message" rows="4" placeholder="Brief: sizes, styles, branding, timeline"></textarea>
+          <div style="display:flex; gap:10px; align-items:center">
+            <button type="submit">Send Enquiry</button>
+            <a class="btn btn-ghost" href="mailto:sales@karancollections.in">Email Us</a>
+          </div>
+        </form>
+
+        <aside class="aside">
+          <div class="wa">
+            <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#e6fff9,#ffffff);display:grid;place-items:center;font-weight:800;color:var(--accent-1)">WA</div>
+            <div>
+              <div style="font-weight:700">+91‑9210 008 549</div>
+              <div style="color:var(--muted); font-size:.95rem">Quick enquiries & sample requests</div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(180deg,#ffffff,#fffaf7); padding:12px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
+            <strong>Pan‑India Delivery</strong>
+            <p style="margin:8px 0 0; color:var(--muted)">We ship across India with bulk‑order discounts and tracking.</p>
+          </div>
+
+          <div style="background:linear-gradient(180deg,#fff,#fffdfb); padding:12px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); text-align:center">
+            <strong>Need samples fast?</strong>
+            <p style="margin:8px 0; color:var(--muted)">We can dispatch samples within 7–10 days (depending on location).</p>
+            <a class="btn btn-primary" href="#contact">Request Sample</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; margin-top:28px">
+        <div>
+          <strong>Karan Collections</strong><br>
+          <small style="color:var(--muted)">FF, Jaipur • sales@karancollections.in • GSTIN: XXAAAAA0000A1Z0</small>
+        </div>
+        <div style="color:var(--muted)">© 2025 Karan Collections</div>
+      </div>
+    </footer>
   </div>
-  <footer>
-    &copy; 2025 Karan Collections. Crafted with Jaipur heart & international style.
-  </footer>
+
   <script>
-    // Navigation active highlight and smooth scroll
-    document.querySelectorAll('nav a').forEach(link=>{
-      link.addEventListener('click',function(e){
-        e.preventDefault();
-        document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
-        this.classList.add('active');
-        let section=document.querySelector(this.getAttribute('href'));
-        section.scrollIntoView({behavior:'smooth'});
+    // reveal on scroll
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
+    },{threshold:0.12});
+    els.forEach(e=>io.observe(e));
+
+    // quick show filter (no heavy libraries)
+    document.querySelectorAll('.masonry .item').forEach(it=>it.style.display='block');
+
+    // optional: smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'}); }
       });
-    });
-    // Fade-in effects on scroll
-    function reveal(){
-      document.querySelectorAll('.fade').forEach(el=>{
-        let rect=el.getBoundingClientRect();
-        if(rect.top<window.innerHeight-40)el.classList.add('visible');
-      });
-    }
-    window.addEventListener('scroll', reveal);
-    document.addEventListener('DOMContentLoaded', ()=>{
-      reveal();
-      document.querySelector('nav a').classList.add('active');
     });
   </script>
 </body>
