@@ -1,333 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karan Collections — Uniforms that define professional identity</title>
-  <meta name="description" content="Karan Collections — Manufacturers of uniforms for schools, colleges, hospitals and corporates. Bulk orders, PAN‑India delivery, custom branding and samples." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#fff8f0">
+  <title>Karan Collections | Uniform Experts</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    :root{
-      --bg:#fbfbfb;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --ink:#0f172a;
-      --accent-1:#07b7a8; /* teal */
-      --accent-2:#ff6b6b; /* coral */
-      --radius:14px;
-      --shadow: 0 12px 30px rgba(15,23,42,0.06);
-      --container:1200px;
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
-    *{box-sizing:border-box}
-    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto; margin:0; color:var(--ink); background:linear-gradient(180deg,#ffffff,var(--bg)); -webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    .wrap{width:min(var(--container),94vw); margin:32px auto}
-
-    /* Header */
-    header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px; position:sticky; top:14px; z-index:50}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;color:white;font-weight:800;font-size:20px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2)); box-shadow:0 10px 26px rgba(7,183,168,0.12)}
-    nav{display:flex; gap:14px; align-items:center}
-    nav a{padding:8px 12px; border-radius:10px; font-weight:600; color:var(--muted)}
-    nav a:hover{background:rgba(15,23,42,0.04); color:var(--ink)}
-    .actions{display:flex; gap:8px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:999px; font-weight:700; cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--accent-2),#ff8a80); color:white; box-shadow:0 10px 30px rgba(255,107,107,0.08)}
-    .btn-ghost{border:1px solid rgba(15,23,42,0.06); background:white}
-
-    /* Hero */
-    .hero{display:grid; grid-template-columns: 1fr 420px; gap:24px; align-items:center; margin-top:12px}
-    .hero-media{height:520px; border-radius:18px; overflow:hidden; position:relative; box-shadow:var(--shadow)}
-    .hero-media img{width:100%; height:100%; object-fit:cover; display:block}
-    .hero-card{background:var(--card); border-radius:18px; padding:26px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
-    .kicker{display:inline-block; padding:6px 10px; border-radius:999px; background:linear-gradient(90deg,#f0fff9,#ffffff); border:1px solid rgba(15,23,42,0.03); color:var(--muted); font-weight:700}
-    h1{font-size:clamp(28px,4vw,42px); margin:12px 0 8px}
-    p.lead{margin:0 0 18px; color:var(--muted); font-size:1.05rem}
-
-    /* quick stats */
-    .stats{display:flex; gap:12px; margin-top:14px}
-    .stat{background:linear-gradient(180deg,#fff,#f9fff9); padding:12px 14px; border-radius:12px; border:1px solid rgba(15,23,42,0.03); min-width:120px; text-align:center}
-    .stat strong{display:block; font-size:1.05rem}
-    .stat small{color:var(--muted)}
-
-    /* Categories */
-    .cats{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px}
-    .cat{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); display:flex; gap:12px; align-items:center; cursor:pointer; transition:transform .18s}
-    .cat:hover{transform:translateY(-6px)}
-    .cat .ic{width:56px;height:56px;border-radius:10px; display:grid;place-items:center; font-weight:800}
-    .cat h4{margin:0}
-    .cat p{margin:0; color:var(--muted); font-size:.95rem}
-
-    /* Featured products */
-    .products{margin-top:30px}
-    .prod-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .product{background:var(--card); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); transition:transform .2s}
-    .product:hover{transform:translateY(-8px)}
-    .product img{width:100%; height:220px; object-fit:cover; display:block}
-    .product .body{padding:14px}
-    .product h5{margin:0 0 6px}
-    .product p{margin:0; color:var(--muted); font-size:.95rem}
-    .product .meta{display:flex; justify-content:space-between; align-items:center; margin-top:12px}
-
-    /* trust logos */
-    .trust{display:flex; gap:18px; align-items:center; justify-content:center; margin-top:26px; flex-wrap:wrap}
-    .trust img{height:32px; opacity:.85}
-
-    /* portfolio masonry */
-    .portfolio{margin-top:36px}
-    .portfolio h3{margin-bottom:6px}
-    .masonry{column-count:3; column-gap:12px}
-    .masonry .item{break-inside:avoid; margin-bottom:12px; border-radius:12px; overflow:hidden; position:relative}
-    .masonry .item img{width:100%; display:block}
-    .masonry .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.34)); opacity:0; transition:opacity .18s}
-    .masonry .item:hover .overlay{opacity:1}
-    .masonry .meta{position:absolute; left:12px; bottom:12px; color:white}
-
-    /* contact */
-    .contact{display:grid; grid-template-columns:1fr 360px; gap:18px; margin-top:36px}
-    .form{background:var(--card); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)}
-    .form input, .form textarea{width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(15,23,42,0.06); margin-bottom:10px}
-    .form button{background:linear-gradient(90deg,var(--accent-1),#49d9bc); color:white; padding:12px 14px; border-radius:10px; border:none; font-weight:700; cursor:pointer}
-    .aside{display:flex; flex-direction:column; gap:12px}
-    .wa{display:flex; gap:12px; align-items:center; padding:12px; border-radius:12px; background:linear-gradient(90deg,#f0fff9,#ffffff); border:1px solid rgba(15,23,42,0.03)}
-
-    /* footer */
-    footer{margin-top:36px; padding:28px 0; border-top:1px solid rgba(15,23,42,0.04); color:var(--muted)}
-
-    /* responsive */
-    @media (max-width:1060px){
-      .hero{grid-template-columns:1fr}
-      .cats{grid-template-columns:repeat(2,1fr)}
-      .prod-grid{grid-template-columns:repeat(2,1fr)}
-      .masonry{column-count:2}
-      .contact{grid-template-columns:1fr}
+    .navbar {
+      background-color: #004080;
     }
-    @media (max-width:640px){
-      nav{display:none}
-      .wrap{margin:18px}
-      .logo{width:56px;height:56px}
-      .masonry{column-count:1}
-      .prod-grid{grid-template-columns:1fr}
-      .cats{grid-template-columns:1fr}
+    .navbar-nav .nav-link {
+      color: #fff !important;
     }
-
-    /* reveal */
-    .reveal{opacity:0; transform:translateY(12px); transition:all .6s cubic-bezier(.2,.9,.3,1)}
-    .reveal.show{opacity:1; transform:none}
+    header {
+      background: url('https://via.placeholder.com/1920x800?text=Karan+Collections+Uniforms') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    .section-title {
+      margin-bottom: 40px;
+    }
+    .service-icon {
+      font-size: 40px;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    .portfolio img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background: #004080;
+      color: white;
+      padding: 20px 0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">KC</div>
-        <div>
-          <div style="font-weight:700">Karan Collections</div>
-          <div style="font-size:12px; color:var(--muted)">Uniforms • Schools • Hospitals • Corporate</div>
-        </div>
-      </div>
 
-      <nav>
-        <a href="#categories">Categories</a>
-        <a href="#featured">Featured</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="actions">
-        <a class="btn btn-ghost" href="tel:+919210008549">Call: +91 9210 008 549</a>
-        <a class="btn btn-primary" href="#contact">Request a Quote</a>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-media" aria-hidden>
-        <img src="https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c" alt="Uniforms banner">
-      </div>
-
-      <div class="hero-card reveal">
-        <span class="kicker">Custom Uniforms</span>
-        <h1>Uniforms that define professional identity</h1>
-        <p class="lead">We make uniforms for schools, colleges, hospitals and corporates — thoughtful fabrics, consistent sizing and on‑time delivery across India.</p>
-
-        <div class="stats">
-          <div class="stat"><strong>10,000+</strong><small>Happy customers</small></div>
-          <div class="stat"><strong>25+</strong><small>Industries served</small></div>
-          <div class="stat"><strong>9000+</strong><small>Pin codes reached</small></div>
-        </div>
-
-        <div style="margin-top:18px; display:flex; gap:10px; align-items:center">
-          <a class="btn btn-primary" href="#contact">Request a Callback</a>
-          <a class="btn btn-ghost" href="#featured">Shop Samples</a>
-        </div>
-
-        <div style="margin-top:18px; color:var(--muted)">
-          <small>ISO 9001:2015 • Bulk discounts • 7‑day exchanges</small>
-        </div>
-      </div>
-    </section>
-
-    <!-- CATEGORIES -->
-    <section id="categories" class="reveal">
-      <h3 style="margin:0 0 8px">Top Categories</h3>
-      <p style="margin:0 0 16px; color:var(--muted)">Explore our collections by industry</p>
-      <div class="cats">
-        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#e6fffb,#f0fff9); color:var(--accent-1)">🎒</div><div><h4>School Uniforms</h4><p>Shirts, trousers, skirts & blazers with embroidered crests.</p></div></div>
-        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#fff0f0,#fff8f8); color:var(--accent-2)">🏥</div><div><h4>Hospital Uniforms</h4><p>Scrubs, lab coats & patient wear with easy-care fabrics.</p></div></div>
-        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#fffaf0,#fffdfb); color:#f59e0b">💼</div><div><h4>Corporate Wear</h4><p>Polos, shirts, jackets and branding for on-duty staff.</p></div></div>
-        <div class="cat" onclick="location.hash='portfolio';"><div class="ic" style="background:linear-gradient(135deg,#f5f3ff,#fbfbff); color:#6c63ff">🎓</div><div><h4>College Attire</h4><p>Formal and semi-formal sets for campus life and events.</p></div></div>
-      </div>
-    </section>
-
-    <!-- FEATURED PRODUCTS -->
-    <section id="featured" class="products reveal">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
-        <h3 style="margin:0">Featured Products</h3>
-        <div style="color:var(--muted); font-size:.95rem">Shop samples & small batches</div>
-      </div>
-      <div class="prod-grid" style="margin-top:12px">
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d" alt="Polo">
-          <div class="body">
-            <h5>Corporate Polo</h5>
-            <p>Breathable piqué fabric with logo embroidery.</p>
-            <div class="meta"><small style="color:var(--muted)">MOQ: 50</small><strong>From ₹199</strong></div>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c" alt="Blazer">
-          <div class="body">
-            <h5>Campus Blazer</h5>
-            <p>Lightweight wool blend with crisp lapels.</p>
-            <div class="meta"><small style="color:var(--muted)">MOQ: 30</small><strong>Custom quote</strong></div>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="https://images.unsplash.com/photo-1582719478179-1864d9d4df2b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=76b9ef2e6a1d4b2c2c5b1a1b0f3e9b2c" alt="Scrub">
-          <div class="body">
-            <h5>Comfort Scrub</h5>
-            <p>Soft, durable fabric with reinforced stitching.</p>
-            <div class="meta"><small style="color:var(--muted)">MOQ: 50</small><strong>From ₹349</strong></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="trust">
-        <img src="https://dummyimage.com/120x32/fff/aaa&text=School+Logo" alt="logo">
-        <img src="https://dummyimage.com/120x32/fff/aaa&text=Hospital+Logo" alt="logo">
-        <img src="https://dummyimage.com/120x32/fff/aaa&text=Brand+Logo" alt="logo">
-        <img src="https://dummyimage.com/120x32/fff/aaa&text=College+Logo" alt="logo">
-      </div>
-    </section>
-
-    <!-- PORTFOLIO MASONRY -->
-    <section id="portfolio" class="portfolio reveal">
-      <h3 style="margin:0">Portfolio</h3>
-      <p style="margin:6px 0 12px; color:var(--muted)">Real projects we delivered for institutions across India</p>
-      <div class="masonry">
-        <div class="item"><img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=9e8b7a6c5d4f3e2a1b0c9d8e7f6a5b4c" alt="winter blazer"><div class="overlay"></div><div class="meta"><strong>Winter Blazers</strong></div></div>
-        <div class="item"><img src="https://images.unsplash.com/photo-1520975912366-1f6d4f8f2c8b?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b1a2b4d3c5d6f7a8b9c0d1e2f3a4b5c" alt="students"><div class="overlay"></div><div class="meta"><strong>School Sets</strong></div></div>
-        <div class="item"><img src="https://images.unsplash.com/photo-1581091870623-3c9f2d7f5a1a?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=3a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d" alt="lab coat"><div class="overlay"></div><div class="meta"><strong>Lab Coats</strong></div></div>
-        <div class="item"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f6c2a4b3e6f0d4e5c1b6c9d0a7f8b3d" alt="polo shirts"><div class="overlay"></div><div class="meta"><strong>Polo Range</strong></div></div>
-        <div class="item"><img src="https://images.unsplash.com/photo-1521335629791-ce4aec67ddaf?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e2f6a4b3c1d0e2a4f6b9c8d0a7f3b2c" alt="blazer"><div class="overlay"></div><div class="meta"><strong>College Blazers</strong></div></div>
-      </div>
-    </section>
-
-    <!-- WHY / TESTIMONIALS -->
-    <section id="why" class="reveal" style="margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:18px">
-      <div style="background:linear-gradient(180deg,#fff,#fffdf9); padding:18px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
-        <h3 style="margin-top:0">Why Choose Us</h3>
-        <ul style="color:var(--muted); line-height:1.8">
-          <li><strong>Quality Assurance:</strong> Multiple QC stages and fabric testing.</li>
-          <li><strong>Flexible MOQs:</strong> Starting from 30–50 sets for schools and corporates.</li>
-          <li><strong>Branding Options:</strong> Embroidery, screen print and packaging.</li>
-        </ul>
-      </div>
-
-      <div style="display:flex; flex-direction:column; gap:12px">
-        <div style="background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
-          <strong>"Excellent quality & timely delivery"</strong>
-          <p style="margin:8px 0 0; color:var(--muted)">— St. Xavier's School</p>
-        </div>
-        <div style="background:var(--card); padding:16px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
-          <strong>"Very responsive team and good samples"</strong>
-          <p style="margin:8px 0 0; color:var(--muted)">— CityCare Hospital</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
-      <h3 style="margin-bottom:8px">Get in touch / Request a Callback</h3>
-      <div class="contact">
-        <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
-          <input name="company" type="text" placeholder="Institution / Company" required>
-          <input name="name" type="text" placeholder="Contact person" required>
-          <input name="email" type="email" placeholder="Email" required>
-          <input name="phone" type="tel" placeholder="Phone (with country code)" required>
-          <textarea name="message" rows="4" placeholder="Brief: sizes, styles, branding, timeline"></textarea>
-          <div style="display:flex; gap:10px; align-items:center">
-            <button type="submit">Send Enquiry</button>
-            <a class="btn btn-ghost" href="mailto:sales@karancollections.in">Email Us</a>
-          </div>
-        </form>
-
-        <aside class="aside">
-          <div class="wa">
-            <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,#e6fff9,#ffffff);display:grid;place-items:center;font-weight:800;color:var(--accent-1)">WA</div>
-            <div>
-              <div style="font-weight:700">+91‑9210 008 549</div>
-              <div style="color:var(--muted); font-size:.95rem">Quick enquiries & sample requests</div>
-            </div>
-          </div>
-
-          <div style="background:linear-gradient(180deg,#ffffff,#fffaf7); padding:12px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03)">
-            <strong>Pan‑India Delivery</strong>
-            <p style="margin:8px 0 0; color:var(--muted)">We ship across India with bulk‑order discounts and tracking.</p>
-          </div>
-
-          <div style="background:linear-gradient(180deg,#fff,#fffdfb); padding:12px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(15,23,42,0.03); text-align:center">
-            <strong>Need samples fast?</strong>
-            <p style="margin:8px 0; color:var(--muted)">We can dispatch samples within 7–10 days (depending on location).</p>
-            <a class="btn btn-primary" href="#contact">Request Sample</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <footer class="reveal">
-      <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; margin-top:28px">
-        <div>
-          <strong>Karan Collections</strong><br>
-          <small style="color:var(--muted)">FF, Jaipur • sales@karancollections.in • GSTIN: XXAAAAA0000A1Z0</small>
-        </div>
-        <div style="color:var(--muted)">© 2025 Karan Collections</div>
-      </div>
-    </footer>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">Karan Collections</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
-  <script>
-    // reveal on scroll
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
-    },{threshold:0.12});
-    els.forEach(e=>io.observe(e));
+<!-- Hero Section -->
+<header>
+  <div class="container">
+    <h1 class="mb-3">Uniforms That Define Identity</h1>
+    <p class="lead">We design and supply uniforms for Schools, Colleges, Hospitals, and Corporates</p>
+    <a href="#contact" class="btn btn-primary btn-lg mt-3">Request a Quote</a>
+  </div>
+</header>
 
-    // quick show filter (no heavy libraries)
-    document.querySelectorAll('.masonry .item').forEach(it=>it.style.display='block');
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">About Us</h2>
+    <p>Karan Collections is a trusted name in uniform manufacturing. From educational institutions to corporate environments, we deliver quality, comfort, and consistent branding through our tailor-made uniforms. Our commitment to excellence ensures that your organization stands out with pride.</p>
+  </div>
+</section>
 
-    // optional: smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const href = a.getAttribute('href');
-        if(href.length>1){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  </script>
-</body>
-</html>
+<!-- Services -->
+<section id="services" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="service-box">
+          <div class="service-icon"><i class="fas fa-school"></i></div>
+          <h5>School Uniforms</h5>
+          <p>Durable, functional, and modern designs tailored for schools.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="service-box">
+          <div class="service-icon"><i class="fas fa-university"></i></div>
+          <h5>College Uniforms</h5>
+          <p>Comfortable and stylish attire reflecting your institution's values.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="service-box">
+          <div class="service-icon"><i class="fas fa-user-nurse"></i></div>
+          <h5>Hospital Uniforms</h5>
+          <p>Clean, professional, and compliant designs for medical professionals.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="service-box">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h5>Corporate Wear</h5>
+          <p>Elegant and customized apparel to match your brand image.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">Our Portfolio</h2>
+    <div class="row g-4 portfolio">
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/400x300?text=School+Uniform" alt="School Uniform">
+      </div>
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/400x300?text=Hospital+Uniform" alt="Hospital Uniform">
+      </div>
+      <div class="col-md-4">
+        <img src="https://via.placeholder.com/400x300?text=Corporate+Wear" alt="Corporate Wear">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title">Testimonials</h2>
+    <blockquote class="blockquote">
+      <p>"Karan Collections delivered on time with outstanding quality. The students love their new look!"</p>
+      <footer class="blockquote-footer">Principal, XYZ School</footer>
+    </blockquote>
+    <blockquote class="blockquote mt-4">
+      <p>"Our hospital staff now look more professional than ever. Highly recommended."</p>
+      <footer class="blockquote-footer">HR Head, ABC Hospital</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="contact-form" onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" rows="4" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>&copy; 2025 Karan Collections. All
