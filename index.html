@@ -1,415 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karan Collections | Uniform Manufacturers – Schools, Colleges, Hospitals</title>
-  <meta name="description" content="Karan Collections manufactures high‑quality uniforms for schools, colleges, hospitals, corporate teams, hospitality and more. Made in India. Bulk orders, custom fitting, and branding." />
-  <meta name="keywords" content="uniform manufacturer, school uniforms, hospital scrubs, corporate uniforms, lab coats, housekeeping uniforms, India" />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Karan Collections | Uniform Manufacturers" />
-  <meta property="og:description" content="Manufacturers of uniforms for schools, colleges, hospitals & corporates. Bulk orders, custom branding, pan‑India delivery." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/0f172a/ffffff&text=Karan+Collections" />
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/karan-collections" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Collections | Uniform Manufacturers</title>
+  <meta name="description" content="Karan Collections – Manufacturers of uniforms for schools, colleges, hospitals, and corporates." />
   <style>
-    :root{
-      --bg:#0b1220;           /* page background */
-      --card:#0f172a;         /* card background */
-      --muted:#94a3b8;        /* muted text */
-      --text:#e2e8f0;         /* primary text */
-      --brand:#38bdf8;        /* accent */
-      --brand-2:#22d3ee;      /* accent 2 */
-      --ring: rgba(56,189,248,.4);
-      --shadow: 0 10px 30px rgba(2, 6, 23, .6);
-      --radius: 18px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:radial-gradient(1200px 600px at 80% -10%, #0b2338 0%, transparent 50%), linear-gradient(180deg,#0a0f1a, #0b1220 45%, #0a0f1a); color:var(--text); line-height:1.6}
-    img{max-width:100%; display:block}
-    a{color:inherit; text-decoration:none}
-    .container{width:min(1200px, 92vw); margin-inline:auto}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.1rem; border-radius:999px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#00131a; font-weight:700; box-shadow:0 8px 24px rgba(34,211,238,.35); transition:transform .15s ease, box-shadow .2s}
-    .btn:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(34,211,238,.45)}
-    .btn.outline{background:transparent; color:var(--text); border:1px solid rgba(148,163,184,.35); box-shadow:none}
-    .chip{display:inline-flex; padding:.35rem .7rem; border:1px solid rgba(148,163,184,.25); border-radius:999px; color:#cbd5e1; font-weight:600; gap:.4rem; align-items:center;}
-
-    /* Header */
-    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(6px); background:linear-gradient(180deg, rgba(10,15,26,.9), rgba(10,15,26,.4)); border-bottom:1px solid rgba(148,163,184,.15)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:.8rem 0}
-    .brand{display:flex; align-items:center; gap:.75rem}
-    .brand .logo{width:42px; height:42px; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border-radius:14px; color:#00131a; font-weight:900}
-    nav a{margin-left:1rem; padding:.5rem .75rem; border-radius:10px; font-weight:600; color:#cbd5e1}
-    nav a:hover{background:rgba(148,163,184,.12)}
-    .nav-actions{display:flex; gap:.6rem; align-items:center}
-    .mobile-toggle{display:none}
-
-    /* Hero */
-    .hero{position:relative; padding:clamp(64px, 6vw, 96px) 0 48px}
-    .hero-grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:40px; align-items:center}
-    h1{font-size:clamp(30px, 3.4vw, 54px); line-height:1.15; margin:0 0 10px; letter-spacing:-.02em}
-    .sub{color:var(--muted); font-size:clamp(16px,1.25vw,18px)}
-    .hero-cta{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
-    .badges{display:flex; gap:10px; margin:22px 0; flex-wrap:wrap}
-    .hero-card{background:linear-gradient(180deg, #0f172a, #0b1220); border:1px solid rgba(148, 163, 184, .15); padding:20px; border-radius:var(--radius); box-shadow:var(--shadow)}
-
-    /* Sections */
-    section{padding:64px 0}
-    .section-head{display:flex; align-items:end; justify-content:space-between; gap:18px; margin-bottom:26px}
-    .section-head h2{margin:0; font-size:clamp(22px,2.4vw,34px); letter-spacing:-.01em}
-    .section-head p{margin:0; color:var(--muted)}
-
-    /* Industries */
-    .industries{display:grid; grid-template-columns:repeat(6,1fr); gap:14px}
-    .industry{background:linear-gradient(180deg, #121a2c, #0c1424); border:1px solid rgba(148,163,184,.16); padding:18px; border-radius:16px; text-align:center}
-    .industry span{display:block; font-weight:700}
-    .industry small{color:var(--muted)}
-
-    /* Gallery */
-    .filters{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px}
-    .filters button{border:1px solid rgba(148,163,184,.25); background:transparent; color:#dbeafe; padding:.55rem .9rem; border-radius:999px; font-weight:600; cursor:pointer}
-    .filters button.active{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#00131a; border-color:transparent}
-    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px}
-    .card{background:linear-gradient(180deg,#101828,#0b1220); border:1px solid rgba(148,163,184,.16); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)}
-    .card .img{aspect-ratio:4/3; background:linear-gradient(135deg,#0b2338,#083b47); display:grid; place-items:center; color:#9bdcf3; font-weight:800; letter-spacing:.1em}
-    .card .meta{display:flex; align-items:center; justify-content:space-between; padding:14px}
-    .tag{font-size:.8rem; color:#93c5fd; font-weight:700}
-    .price{color:#a7f3d0; font-weight:800}
-
-    /* Process */
-    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
-    .step{background:linear-gradient(180deg, #0f172a, #0c1424); border:1px solid rgba(148,163,184,.16); padding:20px; border-radius:16px}
-    .step .num{width:36px; height:36px; display:grid; place-items:center; border-radius:10px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#00131a; font-weight:900}
-
-    /* Testimonials */
-    .testis{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .t{background:linear-gradient(180deg, #0f172a, #0b1220); border:1px solid rgba(148,163,184,.16); padding:22px; border-radius:16px}
-    .t small{color:var(--muted)}
-
-    /* Contact */
-    form{display:grid; grid-template-columns:1fr 1fr; gap:12px}
-    form .full{grid-column:1/-1}
-    input, textarea{width:100%; padding:14px 16px; border-radius:12px; background:#0b1220; color:var(--text); border:1px solid rgba(148,163,184,.2); outline:none}
-    input:focus, textarea:focus{border-color:var(--brand); box-shadow:0 0 0 4px var(--ring)}
-    textarea{min-height:140px}
-
-    /* Footer */
-    footer{padding:28px 0; border-top:1px solid rgba(148,163,184,.15); color:#a5b4fc}
-
-    /* Utilities */
-    .hide{display:none}
-    .row{display:flex; gap:12px; flex-wrap:wrap}
-    .center{text-align:center}
-
-    /* Responsive */
-    @media (max-width: 1024px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .steps{grid-template-columns:repeat(2,1fr)}
-      .industries{grid-template-columns:repeat(3,1fr)}
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    @media (max-width: 640px){
-      nav{display:none}
-      .mobile-toggle{display:inline-flex; border:1px solid rgba(148,163,184,.25); background:transparent; color:#e2e8f0; padding:.55rem .9rem; border-radius:999px; font-weight:700}
-      .grid{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
-      .industries{grid-template-columns:repeat(2,1fr)}
-      form{grid-template-columns:1fr}
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #2a4d69;
     }
-
-    /* Appear animation */
-    .reveal{opacity:0; transform:translateY(10px); transition:opacity .6s ease, transform .6s ease}
-    .reveal.show{opacity:1; transform:none}
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: #2a4d69;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(135deg, #eaf6ff, #ffffff);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1b3b5f;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #2a4d69;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact-form button {
+      background: #2a4d69;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #16324f;
+    }
+    footer {
+      background: #ffffff;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 1.5rem;
+      color: #666;
+    }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Karan Collections",
-    "url":"https://YOUR-USERNAME.github.io/karan-collections",
-    "logo":"https://dummyimage.com/512x512/22d3ee/00131a&text=KC",
-    "description":"Manufacturers of uniforms for schools, colleges, hospitals and corporates.",
-    "address":{
-      "@type":"PostalAddress",
-      "addressCountry":"IN"
-    },
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"sales",
-      "telephone":"+91-XXXXXXXXXX",
-      "email":"sales@karancollections.in"
-    }]
-  }
-  </script>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">KC</div>
-        <div>
-          <strong style="font-size:1.05rem; letter-spacing:.2px">Karan Collections</strong><br>
-          <small style="color:var(--muted)">Uniform Manufacturers</small>
-        </div>
-      </div>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#industries">Industries</a>
-        <a href="#gallery">Portfolio</a>
-        <a href="#process">Process</a>
-        <a href="#testimonials">Clients</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="chip" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Karan%20Collections%2C%20I%27d%20like%20to%20discuss%20uniforms" target="_blank" rel="noopener">
-          <!-- phone icon -->
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.47a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.2 2.2z" stroke="currentColor" stroke-width="1.5"/></svg>
-          Enquire
-        </a>
-        <button class="mobile-toggle" aria-label="Open menu" onclick="document.querySelector('nav').classList.toggle('show');">Menu</button>
-      </div>
-    </div>
+    <h1>Karan Collections</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="badges">
-            <span class="chip" title="ISO certified">ISO‑Compliant</span>
-            <span class="chip" title="Pan‑India delivery">Pan‑India Delivery</span>
-            <span class="chip" title="Custom branding">Custom Branding</span>
-          </div>
-          <h1>Tailored Uniforms for <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent">Schools, Colleges & Hospitals</span></h1>
-          <p class="sub">From durable school sets to hospital scrubs and corporate attire — we design, stitch and brand at scale with strict quality control.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#contact">Get a Quote</a>
-            <a class="btn outline" href="#gallery">See Portfolio</a>
-          </div>
-          <div class="row" style="margin-top:18px; color:var(--muted)">
-            <div>• Minimum order from 50 sets</div>
-            <div>• Embroidery/Print branding</div>
-            <div>• Fabric certificates on request</div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="row" style="justify-content:space-between; align-items:center">
-            <strong>Fast Facts</strong>
-            <span class="chip">Lead Time: 10–21 days*</span>
-          </div>
-          <div class="row" style="margin-top:10px">
-            <div class="industry" style="flex:1; min-width:140px">
-              <span>50k+</span>
-              <small>Garments/Year</small>
-            </div>
-            <div class="industry" style="flex:1; min-width:140px">
-              <span>25+</span>
-              <small>Institutions Served</small>
-            </div>
-            <div class="industry" style="flex:1; min-width:140px">
-              <span>8+</span>
-              <small>Fabric Options</small>
-            </div>
-          </div>
-          <small style="display:block; margin-top:10px; color:var(--muted)">*Depends on quantity & customization</small>
-        </div>
-      </div>
-    </section>
+  <section class="hero">
+    <h2>Crafting Quality Uniforms</h2>
+    <p>For Schools, Colleges, Hospitals & Corporates</p>
+  </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="container reveal">
-      <div class="section-head">
-        <h2>About Karan Collections</h2>
-        <p>Built on quality, fit and timely delivery</p>
-      </div>
-      <div class="row" style="align-items:flex-start">
-        <div style="flex:1; min-width:280px">
-          <p>We are a Rajasthan‑based manufacturer specializing in uniforms across education, healthcare, and corporate segments. Our in‑house cutting, stitching and QA processes ensure long‑lasting garments with consistent sizing. We support embroidery and print branding, custom trims, and packaging for institutional orders.</p>
-          <p class="row" style="color:var(--muted)">
-            <span class="chip">In‑house Patterning</span>
-            <span class="chip">Bulk Sourcing</span>
-            <span class="chip">QC Checks</span>
-            <span class="chip">After‑Sales Support</span>
-          </p>
-        </div>
-        <div class="hero-card" style="flex:1; min-width:280px">
-          <strong>Fabric Library</strong>
-          <div class="row" style="margin-top:10px">
-            <span class="chip">Poly‑Cotton</span>
-            <span class="chip">Twill</span>
-            <span class="chip">Gabardine</span>
-            <span class="chip">Terrycot</span>
-            <span class="chip">Tetra</span>
-            <span class="chip">Blended Knits</span>
-          </div>
-          <small style="display:block; margin-top:8px; color:var(--muted)">Others on request with MOQs</small>
-        </div>
-      </div>
-    </section>
+  <section id="about">
+    <h3>About Us</h3>
+    <p>Karan Collections specializes in manufacturing high-quality uniforms tailored for education, healthcare, and professional industries. We combine comfort, durability, and design to create uniforms that stand out.</p>
+  </section>
 
-    <!-- INDUSTRIES -->
-    <section id="industries" class="container reveal">
-      <div class="section-head">
-        <h2>Industries We Serve</h2>
-        <p>End‑to‑end uniform programs</p>
+  <section id="portfolio">
+    <h3>Our Work</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="School Uniforms">
+        <h4>School Uniforms</h4>
       </div>
-      <div class="industries">
-        <div class="industry"><span>Schools</span><small>Shirts • Trousers • Skirts • Blazers</small></div>
-        <div class="industry"><span>Colleges</span><small>Formal & Semi‑formal Sets</small></div>
-        <div class="industry"><span>Hospitals</span><small>Scrubs • Lab Coats • Patient Wear</small></div>
-        <div class="industry"><span>Corporate</span><small>Office Wear • Polo T‑shirts</small></div>
-        <div class="industry"><span>Hospitality</span><small>Housekeeping • Kitchen</small></div>
-        <div class="industry"><span>Security</span><small>Shirts • Caps • Belts</small></div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="College Uniforms">
+        <h4>College Uniforms</h4>
       </div>
-    </section>
-
-    <!-- GALLERY / PORTFOLIO -->
-    <section id="gallery" class="container reveal">
-      <div class="section-head">
-        <h2>Portfolio</h2>
-        <p>Sample styles & categories</p>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Hospital Uniforms">
+        <h4>Hospital Uniforms</h4>
       </div>
-      <div class="filters" role="tablist" aria-label="Filter portfolio">
-        <button class="active" data-filter="all" role="tab">All</button>
-        <button data-filter="school" role="tab">School</button>
-        <button data-filter="college" role="tab">College</button>
-        <button data-filter="hospital" role="tab">Hospital</button>
-        <button data-filter="corporate" role="tab">Corporate</button>
-      </div>
-      <div class="grid" id="portfolioGrid">
-        <!-- Use real photos later; these are placeholders -->
-        <article class="card" data-cat="school">
-          <div class="img">SCHOOL SET</div>
-          <div class="meta"><span class="tag">Shirt + Trouser</span><span class="price">Bulk OEM</span></div>
-        </article>
-        <article class="card" data-cat="hospital">
-          <div class="img">HOSPITAL</div>
-          <div class="meta"><span class="tag">Scrub Set</span><span class="price">Bulk OEM</span></div>
-        </article>
-        <article class="card" data-cat="corporate">
-          <div class="img">CORPORATE</div>
-          <div class="meta"><span class="tag">Polo + Cap</span><span class="price">Branding</span></div>
-        </article>
-        <article class="card" data-cat="college">
-          <div class="img">COLLEGE</div>
-          <div class="meta"><span class="tag">Formal Set</span><span class="price">Bulk OEM</span></div>
-        </article>
-        <article class="card" data-cat="hospital">
-          <div class="img">LAB COAT</div>
-          <div class="meta"><span class="tag">Coat + ID</span><span class="price">Custom</span></div>
-        </article>
-        <article class="card" data-cat="school">
-          <div class="img">BLAZER</div>
-          <div class="meta"><span class="tag">Winterwear</span><span class="price">Wool Blend</span></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="container reveal">
-      <div class="section-head">
-        <h2>How We Work</h2>
-        <p>Simple, transparent, fast</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="num">1</div>
-          <h3>Brief & Sizing</h3>
-          <p>Share quantities, sizes and branding. We can size from past data or conduct a measurement camp.</p>
-        </div>
-        <div class="step">
-          <div class="num">2</div>
-          <h3>Sampling</h3>
-          <p>Fabric swatches and sample pieces for approvals. Finalize trims and branding placements.</p>
-        </div>
-        <div class="step">
-          <div class="num">3</div>
-          <h3>Production</h3>
-          <p>Cutting, stitching, QC checks and packing as per your dispatch plan.</p>
-        </div>
-        <div class="step">
-          <div class="num">4</div>
-          <h3>Delivery</h3>
-          <p>Pan‑India shipping with post‑delivery support for size exchanges where applicable.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS / CLIENTS -->
-    <section id="testimonials" class="container reveal">
-      <div class="section-head">
-        <h2>Institutions We’ve Served</h2>
-        <p>References available on request</p>
-      </div>
-      <div class="testis">
-        <div class="t"><strong>St. Xavier’s Group</strong><br><small>School uniforms: shirts, trousers, blazers</small></div>
-        <div class="t"><strong>CityCare Hospital</strong><br><small>Scrubs & lab coats with embroidery</small></div>
-        <div class="t"><strong>TechNova Pvt Ltd</strong><br><small>Corporate polos & jackets</small></div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container reveal">
-      <div class="section-head">
-        <h2>Request a Quote</h2>
-        <p>Tell us about your requirement</p>
-      </div>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="company" placeholder="Institution / Company" required>
-        <input type="text" name="name" placeholder="Contact Person" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Phone (with country code)" required>
-        <input type="text" name="quantity" placeholder="Approx. Quantity (e.g., 300 sets)">
-        <input type="text" name="category" placeholder="Category (School / Hospital / Corporate)">
-        <textarea name="message" class="full" placeholder="Brief (sizes, styles, branding, timeline)"></textarea>
-        <div class="row full">
-          <button type="submit" class="btn">Send Enquiry</button>
-          <a class="btn outline" href="mailto:sales@karancollections.in">Email Us</a>
-        </div>
-      </form>
-      <p class="center" style="color:var(--muted); margin-top:14px">Or WhatsApp us at <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" style="text-decoration:underline">+91‑XXXXXXXXXX</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container row" style="justify-content:space-between; align-items:center">
-      <div>
-        <strong>Karan Collections</strong> — Uniform Manufacturers
-        <div style="color:var(--muted); font-size:.9rem">Rajasthan • India • GSTIN: XXAAAAA0000A1Z0</div>
-      </div>
-      <div class="row">
-        <a href="#about">About</a>
-        <a href="#gallery">Portfolio</a>
-        <a href="#contact">Contact</a>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Corporate Uniforms">
+        <h4>Corporate Uniforms</h4>
       </div>
     </div>
+  </section>
+
+  <section id="industries">
+    <h3>Industries We Serve</h3>
+    <p>We provide tailored uniform solutions for educational institutions, healthcare facilities, and corporate businesses, ensuring comfort and professionalism in every stitch.</p>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Karan Collections. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    // Smooth reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // Portfolio filter
-    const grid = document.getElementById('portfolioGrid');
-    const btns = document.querySelectorAll('.filters button');
-    btns.forEach(b=>b.addEventListener('click',()=>{
-      btns.forEach(x=>x.classList.remove('active'));
-      b.classList.add('active');
-      const f = b.dataset.filter;
-      grid.querySelectorAll('.card').forEach(card=>{
-        const show = (f==='all') || card.dataset.cat === f;
-        card.style.display = show ? '' : 'none';
-      })
-    }))
-  </script>
 </body>
 </html>
