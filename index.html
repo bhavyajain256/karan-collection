@@ -1,192 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karan Collections | Uniform Experts</title>
-
-  <!-- Bootstrap 5 CSS -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Karan Collections — Uniform Manufacturer, Jaipur</title>
+  <meta name="description" content="Karan Collections — Bulk uniforms for hotels, schools, hospitals & industry. Pan-India delivery, ISO standards, quick quotes." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
+    :root{
+      --accent:#f2b705;
+      --primary:#0b3d91;
+      --muted:#6b7280;
+      --bg:#f7f7f7;
     }
-    .navbar {
-      background-color: #004080;
-    }
-    .navbar-nav .nav-link {
-      color: #fff !important;
-    }
-    header {
-      background: url('https://via.placeholder.com/1920x800?text=Karan+Collections+Uniforms') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      color: white;
-      text-shadow: 1px 1px 4px #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-    }
-    .section-title {
-      margin-bottom: 40px;
-    }
-    .service-icon {
-      font-size: 40px;
-      color: #004080;
-      margin-bottom: 15px;
-    }
-    .portfolio img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    footer {
-      background: #004080;
-      color: white;
-      padding: 20px 0;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      border-radius: 5px;
-    }
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;color:#222}
+    .brand{font-family:Montserrat, sans-serif;font-weight:700;color:var(--primary)}
+    .hero{background:#fff url('assets/hero.jpg') center/cover no-repeat;min-height:58vh;display:flex;align-items:center}
+    .hero .overlay{background:rgba(255,255,255,0.92);padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,.08)}
+    .cat-card img{height:120px;object-fit:cover;border-radius:6px}
+    .cta-primary{background:var(--primary);color:#fff;border:0;padding:.6rem 1.1rem;border-radius:8px}
+    .cta-outline{border:1px solid var(--primary);color:var(--primary);padding:.5rem 1rem;border-radius:8px;background:transparent}
+    .whatsapp-float{position:fixed;right:18px;bottom:18px;z-index:1000}
+    footer{background:#fff;padding:24px 0;border-top:1px solid #eee}
+    .logo-strip img{height:40px;opacity:.9;margin:6px 12px}
+    @media (max-width:767px){ .hero{min-height:50vh} }
   </style>
 </head>
 <body>
 
+<!-- Top Bar -->
+<div class="bg-white py-2 border-bottom">
+  <div class="container d-flex justify-content-between align-items-center small">
+    <div>ISO 9001:2015 • Made in Jaipur</div>
+    <div>Call: <a href="tel:+919999999999">+91 99999 99999</a> &nbsp;|&nbsp;
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
   <div class="container">
-    <a class="navbar-brand text-white" href="#">Karan Collections</a>
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand brand" href="#">Karan Collections</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#categories">Collections</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item ms-3"><button class="cta-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Request Quote</button></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header>
+<!-- HERO -->
+<header class="hero">
   <div class="container">
-    <h1 class="mb-3">Uniforms That Define Identity</h1>
-    <p class="lead">We design and supply uniforms for Schools, Colleges, Hospitals, and Corporates</p>
-    <a href="#contact" class="btn btn-primary btn-lg mt-3">Request a Quote</a>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="overlay">
+          <h1 class="brand">Karan Collections</h1>
+          <p class="lead">Tailored uniforms for Hotels, Schools & Industry — Bulk orders • Pan-India Dispatch • 7-day Exchange</p>
+          <div class="d-flex gap-2">
+            <button class="cta-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Request a Quote</button>
+            <a href="https://wa.me/91XXXXXXXXXX" class="cta-outline d-inline-flex align-items-center">WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- About -->
-<section id="about" class="py-5">
-  <div class="container text-center">
-    <h2 class="section-title">About Us</h2>
-    <p>Karan Collections is a trusted name in uniform manufacturing. From educational institutions to corporate environments, we deliver quality, comfort, and consistent branding through our tailor-made uniforms. Our commitment to excellence ensures that your organization stands out with pride.</p>
-  </div>
-</section>
-
-<!-- Services -->
-<section id="services" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="section-title">Our Services</h2>
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="service-box">
-          <div class="service-icon"><i class="fas fa-school"></i></div>
-          <h5>School Uniforms</h5>
-          <p>Durable, functional, and modern designs tailored for schools.</p>
+<!-- Categories -->
+<section id="categories" class="py-5">
+  <div class="container">
+    <h3 class="mb-4">Our Collections</h3>
+    <div class="row g-3">
+      <div class="col-sm-6 col-md-4">
+        <div class="card p-3 cat-card">
+          <img src="assets/cat-corporate.jpg" class="mb-3 w-100" alt="Corporate Uniforms">
+          <h5>Corporate Uniforms</h5>
+          <p class="small text-muted">Shirts, trousers, blazers — custom branding & embroidery.</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="service-box">
-          <div class="service-icon"><i class="fas fa-university"></i></div>
-          <h5>College Uniforms</h5>
-          <p>Comfortable and stylish attire reflecting your institution's values.</p>
+      <div class="col-sm-6 col-md-4">
+        <div class="card p-3 cat-card">
+          <img src="assets/cat-hotel.jpg" class="mb-3 w-100" alt="Hotel Uniforms">
+          <h5>Hotel & Restaurant</h5>
+          <p class="small text-muted">Chef coats, aprons, waiter uniforms with easy wash fabrics.</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="service-box">
-          <div class="service-icon"><i class="fas fa-user-nurse"></i></div>
-          <h5>Hospital Uniforms</h5>
-          <p>Clean, professional, and compliant designs for medical professionals.</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="service-box">
-          <div class="service-icon"><i class="fas fa-building"></i></div>
-          <h5>Corporate Wear</h5>
-          <p>Elegant and customized apparel to match your brand image.</p>
+      <div class="col-sm-6 col-md-4">
+        <div class="card p-3 cat-card">
+          <img src="assets/cat-industrial.jpg" class="mb-3 w-100" alt="Industrial">
+          <h5>Industrial & Safety</h5>
+          <p class="small text-muted">Durable fabrics, reflective trims and custom sizes.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Portfolio -->
-<section id="portfolio" class="py-5">
+<!-- Trust & Stats -->
+<section class="py-4 bg-white border-top">
   <div class="container text-center">
-    <h2 class="section-title">Our Portfolio</h2>
-    <div class="row g-4 portfolio">
-      <div class="col-md-4">
-        <img src="https://via.placeholder.com/400x300?text=School+Uniform" alt="School Uniform">
-      </div>
-      <div class="col-md-4">
-        <img src="https://via.placeholder.com/400x300?text=Hospital+Uniform" alt="Hospital Uniform">
-      </div>
-      <div class="col-md-4">
-        <img src="https://via.placeholder.com/400x300?text=Corporate+Wear" alt="Corporate Wear">
-      </div>
+    <div class="logo-strip d-flex flex-wrap justify-content-center align-items-center">
+      <!-- replace src with client logos -->
+      <img src="assets/logo1.png" alt="client">
+      <img src="assets/logo2.png" alt="client">
+      <img src="assets/logo3.png" alt="client">
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-4"><h4>10,000+</h4><small class="text-muted">Happy Customers</small></div>
+      <div class="col-md-4"><h4>25+</h4><small class="text-muted">Industries Served</small></div>
+      <div class="col-md-4"><h4>9,000+</h4><small class="text-muted">Pin codes Delivered</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="py-5 bg-light">
+  <div class="container">
+    <h3>How it works</h3>
+    <div class="row g-3 mt-3">
+      <div class="col-md-4"><div class="p-3 bg-white rounded">1. Share requirements → Fabric, sizes, quantity</div></div>
+      <div class="col-md-4"><div class="p-3 bg-white rounded">2. Approve sample → Fit & finish</div></div>
+      <div class="col-md-4"><div class="p-3 bg-white rounded">3. Bulk production & delivery</div></div>
     </div>
   </div>
 </section>
 
 <!-- Testimonials -->
-<section id="testimonials" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="section-title">Testimonials</h2>
-    <blockquote class="blockquote">
-      <p>"Karan Collections delivered on time with outstanding quality. The students love their new look!"</p>
-      <footer class="blockquote-footer">Principal, XYZ School</footer>
-    </blockquote>
-    <blockquote class="blockquote mt-4">
-      <p>"Our hospital staff now look more professional than ever. Highly recommended."</p>
-      <footer class="blockquote-footer">HR Head, ABC Hospital</footer>
-    </blockquote>
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h3>What customers say</h3>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <blockquote class="blockquote">“Great quality & timely delivery — highly recommended.” <footer class="blockquote-footer">Ms. Sandhya</footer></blockquote>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote">“Excellent customer service & perfect fit.” <footer class="blockquote-footer">Dr. Shivani</footer></blockquote>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="py-5">
+<section id="contact" class="py-5 bg-white">
   <div class="container">
-    <h2 class="text-center section-title">Contact Us</h2>
-    <div class="row justify-content-center">
+    <h3>Contact</h3>
+    <div class="row mt-3">
       <div class="col-md-6">
-        <form class="contact-form" onsubmit="alert('Thank you! We will contact you soon.'); return false;">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" rows="4" class="form-control" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        <p><strong>Address:</strong> Jaipur, Rajasthan</p>
+        <p><strong>Email:</strong> <a href="mailto:info@karancollections.com">info@karancollections.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919999999999">+91 99999 99999</a></p>
+      </div>
+      <div class="col-md-6">
+        <!-- Simple form using Formspree placeholder -->
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <div class="mb-2"><input name="name" class="form-control" placeholder="Name" required></div>
+          <div class="mb-2"><input name="phone" class="form-control" placeholder="Phone" required></div>
+          <div class="mb-2"><textarea name="details" class="form-control" placeholder="Brief requirements" rows="4" required></textarea></div>
+          <button class="cta-primary">Send Request</button>
         </form>
       </div>
     </div>
@@ -194,6 +176,38 @@
 </section>
 
 <!-- Footer -->
-<footer class="text-center">
-  <div class="container">
-    <p>&copy; 2025 Karan Collections. All
+<footer>
+  <div class="container text-center">
+    <small class="text-muted">© Karan Collections — Jaipur. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Quote Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header border-0"><h5 class="modal-title">Request a Quote</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <input name="name" class="form-control mb-2" placeholder="Name" required>
+          <input name="phone" class="form-control mb-2" placeholder="Phone" required>
+          <select name="category" class="form-select mb-2" required>
+            <option>Corporate</option><option>Hotel</option><option>Industrial</option><option>Security</option>
+          </select>
+          <textarea name="msg" class="form-control mb-2" rows="3" placeholder="Quantity, sizes, location"></textarea>
+          <div class="d-flex justify-content-end"><button class="cta-primary">Send</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WhatsApp Floating -->
+<a class="whatsapp-float" href="https://wa.me/91XXXXXXXXXX" target="_blank" title="Chat on WhatsApp">
+  <img src="assets/whatsapp-icon.png" alt="WhatsApp" style="width:56px;height:56px;border-radius:50%">
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
