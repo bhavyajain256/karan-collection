@@ -1,222 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Karan Collections — Uniform Manufacturing</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2c3e50;
-      --accent: #d4a373;
-      --bg: #f8f9fa;
-      --text: #333;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    header .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-    nav ul {
-      display: flex;
-      gap: 1.2rem;
-      list-style: none;
-    }
-    nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 4rem 2rem;
-      gap: 2rem;
-    }
-    .hero img { width: 100%; border-radius: 12px; }
-    .hero-text h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-    .hero-text p { margin-bottom: 1.5rem; }
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-    .btn:hover { background: #c58a58; }
-    .collections {
-      padding: 3rem 2rem;
-    }
-    .collections h2 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 2rem;
-      color: var(--primary);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card img { width: 100%; display: block; }
-    .card h3 { padding: 1rem; font-size: 1.1rem; color: var(--primary); }
-    .testimonials {
-      padding: 3rem 2rem;
-      background: #fff;
-    }
-    .testimonials h2 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 2rem;
-      color: var(--primary);
-    }
-    .testimonial {
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-      font-style: italic;
-      text-align: center;
-    }
-    .contact {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-    .contact form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .contact input, .contact textarea {
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
-    }
-    .contact button {
-      padding: 0.8rem;
-      border: none;
-      background: var(--primary);
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
-    }
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; padding: 2rem 1rem; }
-      nav ul { flex-direction: column; background: #fff; position: absolute; top: 60px; right: 0; display: none; }
-      nav ul.show { display: flex; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Collections – Uniform Manufacturers in Jaipur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="logo">Karan Collections</div>
-    <nav>
-      <ul>
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero -->
+  <header class="bg-[color:var(--brand,#1e3a8a)] text-white py-16 px-6 text-center">
+    <h1 class="text-4xl font-bold">Karan Collections</h1>
+    <p class="mt-4 text-lg">Uniform Manufacturers in Jaipur – School | Corporate | Hotels | Industries</p>
+    <div class="mt-6 space-x-4">
+      <a href="#enquiry" class="px-6 py-3 rounded-xl bg-white text-[color:var(--brand,#1e3a8a)] font-medium">Send Enquiry</a>
+      <a href="#about" class="px-6 py-3 rounded-xl border border-white font-medium">Learn More</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Premium Uniforms for Every Industry</h1>
-      <p>Based in Jaipur, Rajasthan — crafting timeless, durable, and elegant uniforms tailored to your needs.</p>
-      <a href="#collections" class="btn">Explore Collections</a>
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+    <p class="text-lg leading-relaxed">
+      At <strong>Karan Collections</strong>, we specialize in high-quality uniforms for schools, corporates, hotels, hospitals, and industries. 
+      Based in Jaipur, Rajasthan, we combine durable fabrics, modern designs, and fine stitching to deliver uniforms that look professional and last long.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-center">Our Specializations</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="p-6 border rounded-2xl shadow-sm text-center bg-gray-50">
+          <h3 class="font-semibold text-lg">School Uniforms</h3>
+          <p class="mt-2 text-sm">Smart and comfortable uniforms tailored for students of all age groups.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm text-center bg-gray-50">
+          <h3 class="font-semibold text-lg">Corporate Uniforms</h3>
+          <p class="mt-2 text-sm">Professional attire for offices, factories, and industries that represent your brand.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm text-center bg-gray-50">
+          <h3 class="font-semibold text-lg">Hotel Uniforms</h3>
+          <p class="mt-2 text-sm">Stylish uniforms for hospitality staff that enhance guest experience.</p>
+        </div>
+        <div class="p-6 border rounded-2xl shadow-sm text-center bg-gray-50">
+          <h3 class="font-semibold text-lg">Custom Uniforms</h3>
+          <p class="mt-2 text-sm">Made-to-order uniforms for hospitals, security, and other sectors.</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <img src="https://source.unsplash.com/600x600/?fashion,uniform" alt="Uniforms" />
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold mb-8 text-center">Our Work</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 1</div>
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 2</div>
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 3</div>
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 4</div>
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 5</div>
+      <div class="bg-gray-200 h-48 rounded-xl flex items-center justify-center text-gray-500">Image 6</div>
     </div>
   </section>
 
-  <section id="collections" class="collections">
-    <h2>Our Collections</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?school,uniform" alt="School Uniforms">
-        <h3>School Uniforms</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?corporate,attire" alt="Corporate Uniforms">
-        <h3>Corporate Uniforms</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?hospitality,uniform" alt="Hospitality Uniforms">
-        <h3>Hospitality Uniforms</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?medical,uniform" alt="Healthcare Uniforms">
-        <h3>Healthcare Uniforms</h3>
-      </div>
+  <!-- Enquiry Form -->
+  <section id="enquiry" class="bg-white py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-center">Send an Enquiry</h2>
+      <form class="p-6 rounded-2xl bg-gray-50 border border-slate-200 shadow-sm" 
+            method="POST" 
+            action="https://formsubmit.co/your@email.com">
+
+        <!-- Hidden Fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm" for="name">Name</label>
+            <input required name="name" id="name"
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+              placeholder="Your Name">
+          </div>
+          <div>
+            <label class="text-sm" for="company">Company</label>
+            <input name="company" id="company"
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+              placeholder="Company Name">
+          </div>
+          <div>
+            <label class="text-sm" for="email">Email</label>
+            <input required type="email" name="email" id="email"
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+              placeholder="name@company.com">
+          </div>
+          <div>
+            <label class="text-sm" for="phone">Phone</label>
+            <input name="phone" id="phone"
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+              placeholder="+91-">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="text-sm" for="message">Requirement</label>
+            <textarea required name="message" id="message" rows="4"
+              class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"
+              placeholder="Eg. 100 sets of school uniforms for Class 1–5"></textarea>
+          </div>
+        </div>
+
+        <button class="mt-4 px-6 py-3 rounded-2xl bg-[color:var(--brand,#1e3a8a)] text-white">
+          Send Enquiry
+        </button>
+      </form>
     </div>
   </section>
 
-  <section id="testimonials" class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <p class="testimonial">“Karan Collections delivered top-notch quality uniforms for our entire staff. The fit, durability, and elegance exceeded expectations.”</p>
-    <p class="testimonial">“Excellent service, timely delivery, and great attention to detail. Highly recommended.”</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Karan Collections, Jaipur Rajasthan. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-8 px-6">
+    <p class="text-lg font-semibold">Karan Collections</p>
+    <p class="mt-2 text-sm">Uniform Manufacturers in Jaipur, Rajasthan</p>
+    <p class="mt-2 text-sm">📍 Jaipur, Rajasthan | 📞 +91-XXXXXXXXXX | ✉️ info@karancollections.com</p>
+    <p class="mt-4 text-xs text-gray-400">&copy; 2025 Karan Collections. All rights reserved.</p>
   </footer>
 
 </body>
