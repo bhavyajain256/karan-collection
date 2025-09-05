@@ -1,115 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Karan Collections | Uniform Manufacturer Jaipur</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karan Collections — Premium Uniform Manufacturers in Jaipur</title>
+  <meta name="description" content="Karan Collections designs and manufactures premium school, corporate, hotel and industrial uniforms in Jaipur, Rajasthan." />
+  <link rel="canonical" href="https://karancollections.example.com/">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root {
-      --brand: #1a73e8; /* Fresh blue tone */
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0b1b3b',     // deep navy
+            gold:  '#f1c27d',     // warm gold
+            accent:'#1a73e8'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            serif: ['Playfair Display', 'ui-serif', 'Georgia']
+          },
+          boxShadow: {
+            smooth: '0 10px 30px rgba(2,12,27,.15)'
+          }
+        }
+      }
     }
+  </script>
+  <style>
+    :root{ --brand:#0b1b3b; --gold:#f1c27d }
+    html,body{ scroll-behavior:smooth }
+    body{ overflow-x:hidden }
+    /* Reveal animation */
+    .reveal { opacity:0; transform: translateY(24px); transition: all .8s cubic-bezier(.2,.65,.3,1); }
+    .reveal.visible { opacity:1; transform: translateY(0); }
+    /* Nav backdrop */
+    .nav-solid { background: rgba(11,27,59,.75); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,.08); }
+    /* Gold gradient underline */
+    .gold-underline { position:relative; display:inline-block }
+    .gold-underline::after{
+      content:""; position:absolute; left:0; right:0; bottom:-6px; height:4px;
+      background: linear-gradient(90deg, #fbe9d7, var(--gold), #f5d4a3);
+      border-radius: 999px; opacity:.9;
+    }
+    /* Lightbox */
+    #lightbox { position: fixed; inset:0; background: rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index: 60; }
+    #lightbox img { max-width:90vw; max-height:80vh; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+    /* Testimonial slider */
+    .snap-x { scroll-snap-type: x mandatory; }
+    .snap-center { scroll-snap-align: center; }
   </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karan Collections — Premium Uniform Manufacturers in Jaipur" />
+  <meta property="og:description" content="School, corporate, hotel & industrial uniforms with premium fabrics, custom fits and on-time delivery." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://picsum.photos/id/1067/1200/630" />
+
+  <!-- JSON-LD (Local Business) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Karan Collections",
+    "url":"https://karancollections.example.com/",
+    "description":"Premium uniform manufacturers in Jaipur for schools, corporates, hotels and industries.",
+    "address":{"@type":"PostalAddress","addressLocality":"Jaipur","addressRegion":"Rajasthan","addressCountry":"IN"},
+    "telephone":"+91-XXXXXXXXXX",
+    "areaServed":"IN",
+    "sameAs":[]
+  }
+  </script>
 </head>
-<body class="font-sans text-slate-700">
 
-  <!-- Hero -->
-  <section class="relative bg-[color:var(--brand)] text-white">
-    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold">Karan Collections</h1>
-      <p class="mt-4 text-lg">Premium Uniform Manufacturer in Jaipur, Rajasthan</p>
-      <p class="mt-2">School | Corporate | Hotel | Industrial</p>
-      <a href="#enquiry" class="mt-6 inline-block bg-white text-[color:var(--brand)] font-medium px-6 py-3 rounded-full shadow hover:bg-slate-100">Get a Quote</a>
+<body class="font-sans text-slate-800 bg-slate-50">
+
+  <!-- Sticky Nav -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 rounded-xl bg-gold/90 items-center justify-center shadow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h10M9 17h6" stroke="#0b1b3b" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <span class="font-semibold text-white text-lg tracking-wide">Karan Collections</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-white/90 hover:text-white">About</a>
+          <a href="#segments" class="text-white/90 hover:text-white">Segments</a>
+          <a href="#process" class="text-white/90 hover:text-white">Process</a>
+          <a href="#gallery" class="text-white/90 hover:text-white">Gallery</a>
+          <a href="#enquiry" class="px-4 py-2 rounded-xl bg-gold text-brand font-medium shadow hover:shadow-md">Enquiry</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white/10 border border-white/20 text-white">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <h2 class="text-3xl font-semibold">About Us</h2>
-      <p class="mt-4 leading-relaxed">At Karan Collections, we specialize in designing and manufacturing high-quality uniforms tailored for schools, corporates, hotels, and other professional institutions. With years of expertise and modern machinery, we deliver comfort, durability, and style in every stitch.</p>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-brand/95 backdrop-blur border-t border-white/10">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about" class="text-white/90">About</a>
+        <a href="#segments" class="text-white/90">Segments</a>
+        <a href="#process" class="text-white/90">Process</a>
+        <a href="#gallery" class="text-white/90">Gallery</a>
+        <a href="#enquiry" class="mt-2 px-4 py-2 rounded-xl bg-gold text-brand font-medium w-max">Enquiry</a>
+      </div>
     </div>
-    <img class="rounded-2xl shadow" src="https://source.unsplash.com/600x400/?textile,fabric" alt="Uniforms">
-  </section>
+  </header>
 
-  <!-- Products -->
-  <section class="bg-slate-50 py-16">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-semibold">Our Segments</h2>
-      <div class="grid md:grid-cols-4 gap-6 mt-10">
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-md">
-          <img class="rounded-xl" src="https://source.unsplash.com/400x300/?school,uniform" alt="School Uniforms">
-          <h3 class="mt-4 font-medium">School Uniforms</h3>
+  <!-- HERO -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-brand">
+      <!-- Gradient mesh -->
+      <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-3xl opacity-40" style="background: radial-gradient(closest-side,#f1c27d,transparent 70%);"></div>
+      <div class="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full blur-3xl opacity-30" style="background: radial-gradient(closest-side,#1a73e8,transparent 70%);"></div>
+    </div>
+
+    <div class="pt-24 md:pt-28 pb-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <h1 class="font-serif text-4xl md:text-6xl text-white leading-tight">
+            Premium <span class="gold-underline">Uniforms</span> for Schools, Corporates & Hotels
+          </h1>
+          <p class="mt-5 text-white/80 text-lg">Manufactured in Jaipur with quality fabrics, custom fits and on-time delivery.</p>
+          <div class="mt-8 flex items-center gap-4">
+            <a href="#enquiry" class="px-6 py-3 rounded-xl bg-gold text-brand font-semibold shadow-smooth hover:-translate-y-[2px] transition">Get a Quote</a>
+            <a href="#segments" class="px-6 py-3 rounded-xl border border-white/25 text-white hover:bg-white/10">View Segments</a>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center gap-6 text-white/70 text-sm">
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gold"></span>ISO-grade stitching</div>
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gold"></span>Bulk & custom runs</div>
+            <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gold"></span>Pan-India delivery</div>
+          </div>
         </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-md">
-          <img class="rounded-xl" src="https://source.unsplash.com/400x300/?office,formal" alt="Corporate Uniforms">
-          <h3 class="mt-4 font-medium">Corporate Uniforms</h3>
+
+        <!-- Hero image mosaic -->
+        <div class="reveal">
+          <div class="grid grid-cols-6 grid-rows-6 gap-3">
+            <img src="https://picsum.photos/id/1011/800/900" alt="Tailored suit" class="col-span-4 row-span-4 rounded-2xl object-cover w-full h-full shadow-smooth">
+            <img src="https://picsum.photos/id/1067/800/900" alt="Fabric rolls" class="col-span-2 row-span-3 rounded-2xl object-cover w-full h-full shadow-smooth">
+            <img src="https://picsum.photos/id/1000/800/900" alt="Workwear" class="col-span-3 row-span-2 rounded-2xl object-cover w-full h-full shadow-smooth">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Hotel staff" class="col-span-3 row-span-2 rounded-2xl object-cover w-full h-full shadow-smooth">
+          </div>
         </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-md">
-          <img class="rounded-xl" src="https://source.unsplash.com/400x300/?hotel,staff" alt="Hotel Uniforms">
-          <h3 class="mt-4 font-medium">Hotel Uniforms</h3>
-        </div>
-        <div class="bg-white p-4 rounded-2xl shadow hover:shadow-md">
-          <img class="rounded-xl" src="https://source.unsplash.com/400x300/?factory,workers" alt="Industrial Uniforms">
-          <h3 class="mt-4 font-medium">Industrial Uniforms</h3>
+      </div>
+    </div>
+
+    <!-- Trusted bar -->
+    <div class="bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-8">
+        <span class="text-slate-500 text-sm">Trusted by schools & brands across Rajasthan</span>
+        <div class="flex items-center gap-6 opacity-70">
+          <img src="https://picsum.photos/id/180/120/40" class="h-6 w-auto" alt="Logo 1" loading="lazy">
+          <img src="https://picsum.photos/id/178/120/40" class="h-6 w-auto" alt="Logo 2" loading="lazy">
+          <img src="https://picsum.photos/id/177/120/40" class="h-6 w-auto" alt="Logo 3" loading="lazy">
+          <img src="https://picsum.photos/id/176/120/40" class="h-6 w-auto" alt="Logo 4" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="max-w-6xl mx-auto px-6 py-16 text-center">
-    <h2 class="text-3xl font-semibold">Why Choose Us</h2>
-    <div class="grid md:grid-cols-3 gap-10 mt-10">
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="text-xl font-medium">Quality Fabrics</h3>
-        <p class="mt-2 text-sm">We use only the best fabrics to ensure comfort and durability.</p>
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 reveal">
+        <h2 class="text-3xl md:text-4xl font-serif text-brand">About Karan Collections</h2>
+        <p class="mt-4 text-lg leading-relaxed text-slate-700">We are a Jaipur-based uniform manufacturer delivering consistent quality across large volumes. Our in-house patterning, cutting and stitching ensure fit accuracy, while our sourcing team secures durable, easy-care fabrics suited to daily wear.</p>
+        <div class="mt-6 grid sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-white shadow">
+            <p class="text-3xl font-bold text-brand">10+<span class="text-gold"> yrs</span></p>
+            <p class="text-sm text-slate-600 mt-1">Manufacturing experience</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white shadow">
+            <p class="text-3xl font-bold text-brand">150k+</p>
+            <p class="text-sm text-slate-600 mt-1">Uniforms delivered</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white shadow">
+            <p class="text-3xl font-bold text-brand">100+</p>
+            <p class="text-sm text-slate-600 mt-1">Institutions served</p>
+          </div>
+        </div>
       </div>
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="text-xl font-medium">Customization</h3>
-        <p class="mt-2 text-sm">Tailor-made designs to match your institution’s identity.</p>
-      </div>
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="text-xl font-medium">Timely Delivery</h3>
-        <p class="mt-2 text-sm">On-time delivery for every bulk or custom order.</p>
+      <div class="lg:col-span-5 reveal">
+        <img src="https://picsum.photos/id/1040/900/700" class="rounded-2xl shadow-smooth w-full h-auto object-cover" alt="Workshop">
       </div>
     </div>
   </section>
 
-  <!-- Enquiry Form -->
-  <section id="enquiry" class="bg-slate-100 py-16">
+  <!-- SEGMENTS -->
+  <section id="segments" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Segments We Serve</h2>
+      <p class="text-center text-slate-600 mt-3">From classroom to boardroom, front desk to factory floor.</p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Card -->
+        <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
+          <img src="https://picsum.photos/id/103/800/560" alt="School uniforms" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-brand">School Uniforms</h3>
+            <p class="text-sm text-slate-600 mt-1">Smart, comfortable sets for all grades with durable fabrics.</p>
+          </div>
+        </article>
+        <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
+          <img src="https://picsum.photos/id/100/800/560" alt="Corporate uniforms" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-brand">Corporate Uniforms</h3>
+            <p class="text-sm text-slate-600 mt-1">Formal shirts, trousers, jackets and branded workwear.</p>
+          </div>
+        </article>
+        <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
+          <img src="https://picsum.photos/id/433/800/560" alt="Hotel uniforms" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-brand">Hotel & Hospitality</h3>
+            <p class="text-sm text-slate-600 mt-1">Front desk, housekeeping, kitchen and service staff.</p>
+          </div>
+        </article>
+        <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
+          <img src="https://picsum.photos/id/339/800/560" alt="Industrial uniforms" class="h-44 w-full object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-brand">Industrial & Workwear</h3>
+            <p class="text-sm text-slate-600 mt-1">High-utility coveralls and PPE-friendly garments.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Our Seamless Process</h2>
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="reveal p-6 rounded-2xl bg-white shadow">
+          <div class="h-10 w-10 rounded-lg bg-gold/90 flex items-center justify-center text-brand font-bold">1</div>
+          <h3 class="mt-4 font-semibold">Consult & Measure</h3>
+          <p class="text-sm text-slate-600 mt-1">Understanding requirements, size sets and branding guidelines.</p>
+        </div>
+        <div class="reveal p-6 rounded-2xl bg-white shadow">
+          <div class="h-10 w-10 rounded-lg bg-gold/90 flex items-center justify-center text-brand font-bold">2</div>
+          <h3 class="mt-4 font-semibold">Sample & Approve</h3>
+          <p class="text-sm text-slate-600 mt-1">Prototype garments for fit, fabric and finishing approvals.</p>
+        </div>
+        <div class="reveal p-6 rounded-2xl bg-white shadow">
+          <div class="h-10 w-10 rounded-lg bg-gold/90 flex items-center justify-center text-brand font-bold">3</div>
+          <h3 class="mt-4 font-semibold">Bulk & Delivery</h3>
+          <p class="text-sm text-slate-600 mt-1">Production, QC and on-time dispatch with size-wise packing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY with Lightbox -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Gallery</h2>
+      <p class="text-center text-slate-600 mt-3">Tap an image to enlarge.</p>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Each image can open lightbox -->
+        <img src="https://picsum.photos/id/1027/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 1" data-lightbox>
+        <img src="https://picsum.photos/id/1025/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 2" data-lightbox>
+        <img src="https://picsum.photos/id/1035/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 3" data-lightbox>
+        <img src="https://picsum.photos/id/1049/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 4" data-lightbox>
+        <img src="https://picsum.photos/id/1050/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 5" data-lightbox>
+        <img src="https://picsum.photos/id/1052/900/700" class="rounded-2xl object-cover w-full h-64 cursor-pointer shadow" alt="Uniform sample 6" data-lightbox>
+      </div>
+    </div>
+
+    <div id="lightbox" role="dialog" aria-label="Image preview">
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">What Clients Say</h2>
+      <div class="mt-10 overflow-x-auto no-scrollbar snap-x flex gap-6 pb-2">
+        <article class="min-w-[320px] max-w-md snap-center p-6 rounded-2xl bg-white shadow">
+          <p class="text-slate-700">“Excellent fabric quality and fits. They handled size distribution for 1,200 students perfectly.”</p>
+          <div class="mt-4 text-sm text-slate-500">Principal, Jaipur Public School</div>
+        </article>
+        <article class="min-w-[320px] max-w-md snap-center p-6 rounded-2xl bg-white shadow">
+          <p class="text-slate-700">“We loved the branding consistency across our front-office and housekeeping teams.”</p>
+          <div class="mt-4 text-sm text-slate-500">Operations Head, 4★ Hotel</div>
+        </article>
+        <article class="min-w-[320px] max-w-md snap-center p-6 rounded-2xl bg-white shadow">
+          <p class="text-slate-700">“On-time delivery for our factory units with durable, easy-maintenance materials.”</p>
+          <div class="mt-4 text-sm text-slate-500">Admin, Manufacturing Unit</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section id="enquiry" class="py-20 bg-white">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-center">Send an Enquiry</h2>
-      <form class="mt-8 p-6 rounded-2xl bg-white border border-slate-200 shadow-sm" method="POST" action="https://formsubmit.co/your-email@example.com">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-brand">Get a Custom Quote</h2>
+        <p class="text-slate-600 mt-2">Tell us about your requirement. We typically reply within 24 hours.</p>
+      </div>
+
+      <form class="mt-8 p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-smooth"
+            method="POST"
+            action="https://formsubmit.co/your@email.com">
+        <!-- Hidden settings -->
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+
         <div class="grid sm:grid-cols-2 gap-4">
           <div>
-            <label class="text-sm">Name</label>
-            <input required name="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Your Name" />
+            <label class="text-sm" for="name">Contact Name</label>
+            <input required name="name" id="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Your Name" />
           </div>
           <div>
-            <label class="text-sm">Email</label>
-            <input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="name@company.com" />
+            <label class="text-sm" for="company">Organization</label>
+            <input name="company" id="company" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="School / Company" />
+          </div>
+          <div>
+            <label class="text-sm" for="email">Email</label>
+            <input required type="email" name="email" id="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="name@company.com" />
+          </div>
+          <div>
+            <label class="text-sm" for="phone">Phone</label>
+            <input name="phone" id="phone" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="+91-" />
           </div>
           <div class="sm:col-span-2">
-            <label class="text-sm">Message</label>
-            <textarea required name="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Eg. Requirement for 500 school uniforms"></textarea>
+            <label class="text-sm" for="message">Requirement</label>
+            <textarea required name="message" id="message" rows="4" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Eg. 500 sets for Classes 1–5, logo embroidery on pocket, delivery in 30 days."></textarea>
           </div>
         </div>
-        <button class="mt-6 w-full px-5 py-3 rounded-2xl bg-[color:var(--brand)] text-white font-medium">Submit</button>
+
+        <button class="mt-6 w-full md:w-auto px-6 py-3 rounded-2xl bg-brand text-white font-semibold hover:bg-brand/90">
+          Send Enquiry
+        </button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[color:var(--brand)] text-white py-8">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="font-medium">Karan Collections | Jaipur, Rajasthan</p>
-      <p class="mt-2 text-sm">📍 Sitapura Industrial Area, Jaipur | 📞 +91-XXXXXXXXXX</p>
-      <p class="mt-2 text-sm">© 2025 Karan Collections. All rights reserved.</p>
+  <!-- CONTACT / MAP -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
+      <div class="reveal">
+        <h3 class="text-2xl font-serif text-brand">Contact</h3>
+        <p class="mt-2 text-slate-700">Jaipur, Rajasthan • Mon–Sat 10am–7pm</p>
+        <div class="mt-4 space-y-1 text-slate-700">
+          <p>📞 +91-XXXXXXXXXX</p>
+          <p>✉️ info@karancollections.com</p>
+        </div>
+      </div>
+      <div class="reveal rounded-2xl overflow-hidden shadow">
+        <iframe title="Jaipur Map" src="https://www.google.com/maps?q=Jaipur%2C%20Rajasthan&output=embed" class="w-full h-72 border-0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand text-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 rounded-xl bg-gold/90 items-center justify-center shadow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h10M9 17h6" stroke="#0b1b3b" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="font-semibold text-lg">Karan Collections</span>
+        </div>
+        <p class="mt-3 text-white/70 text-sm">Premium uniform manufacturing for schools, corporates, hotels & industries.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="mt-3 space-y-2 text-white/80 text-sm">
+          <li><a href="#segments" class="hover:text-white">Segments</a></li>
+          <li><a href="#process" class="hover:text-white">Process</a></li>
+          <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+          <li><a href="#enquiry" class="hover:text-white">Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">Reach Us</h4>
+        <p class="mt-3 text-white/80 text-sm">Jaipur, Rajasthan • India</p>
+        <p class="text-white/80 text-sm">info@karancollections.com</p>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-xs text-white/60">&copy; 2025 Karan Collections. All rights reserved.</div>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    // Sticky nav hue
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 10) nav.classList.add('nav-solid');
+      else nav.classList.remove('nav-solid');
+    };
+    window.addEventListener('scroll', onScroll); onScroll();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Reveal on view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('[data-lightbox]').forEach(img=>{
+      img.addEventListener('click', ()=>{
+        lbImg.src = img.src; lb.style.display='flex';
+      });
+    });
+    lb.addEventListener('click', ()=>{ lb.style.display='none'; lbImg.src=''; });
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ lb.style.display='none'; lbImg.src=''; }});
+  </script>
 </body>
 </html>
