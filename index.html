@@ -55,6 +55,15 @@
     /* Testimonial slider */
     .snap-x { scroll-snap-type: x mandatory; }
     .snap-center { scroll-snap-align: center; }
+
+    .card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
   </style>
 
   <!-- Open Graph -->
@@ -200,14 +209,14 @@
   </section>
 
   <!-- SEGMENTS -->
-  <section id="segments" class="py-20 bg-white">
+<!--   <section id="segments" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Segments We Serve</h2>
       <p class="text-center text-slate-600 mt-3">From classroom to boardroom, front desk to factory floor.</p>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4"> -->
         <!-- Card -->
-        <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
+<!--         <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition">
           <img src="assets/schooluni.jpg" alt="School uniforms" class="h-44 w-full object-cover">
           <div class="p-5">
             <h3 class="font-semibold text-lg text-brand">School Uniforms</h3>
@@ -238,6 +247,63 @@
       </div>
     </div>
   </section>
+ -->
+  <section id="segments" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Segments We Serve</h2>
+    <p class="text-center text-slate-600 mt-3">From classroom to boardroom, front desk to factory floor.</p>
+
+    <!-- Horizontal scroll container -->
+    <div class="mt-10 flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-100 snap-x snap-mandatory">
+      
+      <!-- Card 1 -->
+      <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition flex-shrink-0 w-72 snap-start">
+        <img src="assets/schooluni.jpg" alt="School uniforms" class="h-44 w-full object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg text-brand">School Uniforms</h3>
+          <p class="text-sm text-slate-600 mt-1">Smart, comfortable sets for all grades with durable fabrics.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition flex-shrink-0 w-72 snap-start">
+        <img src="assets/corporateuni.jpg" alt="Corporate uniforms" class="h-44 w-full object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg text-brand">Corporate Uniforms</h3>
+          <p class="text-sm text-slate-600 mt-1">Formal shirts, trousers, jackets and branded workwear.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition flex-shrink-0 w-72 snap-start">
+        <img src="assets/hospitalityuni.jpg" alt="Hotel uniforms" class="h-44 w-full object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg text-brand">Hotel & Hospitality</h3>
+          <p class="text-sm text-slate-600 mt-1">Front desk, housekeeping, kitchen and service staff.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition flex-shrink-0 w-72 snap-start">
+        <img src="assets/induni.jpg" alt="Industrial uniforms" class="h-44 w-full object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg text-brand">Industrial & Workwear</h3>
+          <p class="text-sm text-slate-600 mt-1">High-utility coveralls and PPE-friendly garments.</p>
+        </div>
+      </article>
+
+      <!-- New Card 5 -->
+      <article class="reveal rounded-2xl overflow-hidden bg-slate-50 shadow hover:shadow-lg transition flex-shrink-0 w-72 snap-start">
+        <img src="assets/medicaluni.jpg" alt="Medical uniforms" class="h-44 w-full object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold text-lg text-brand">Medical Uniforms</h3>
+          <p class="text-sm text-slate-600 mt-1">Scrubs, lab coats and professional healthcare wear.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <!-- PROCESS -->
   <section id="process" class="py-20 bg-slate-50">
@@ -315,7 +381,13 @@
            alt="Uniform sample 5" 
            loading="lazy" 
            data-lightbox>
-      <img src="assets/mgpslogo.JPG" 
+      <img src="assets/coffee.jpg" 
+           class="w-full h-48 sm:h-56 lg:h-64 object-contain bg-white p-4 rounded-lg shadow-md" 
+           alt="Uniform sample 6" 
+           loading="lazy" 
+           data-lightbox>
+
+       <img src="assets/waffle.jpg" 
            class="w-full h-48 sm:h-56 lg:h-64 object-contain bg-white p-4 rounded-lg shadow-md" 
            alt="Uniform sample 6" 
            loading="lazy" 
