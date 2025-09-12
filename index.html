@@ -350,12 +350,11 @@
     </div>
   </section> -->
   <!-- GALLERY with Lightbox -->
-<section id="gallery" class="py-20 bg-white">
+<!-- <section id="gallery" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Trusted by schools & brands across Rajasthan</h2>
 
     <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Each image can open lightbox -->
       <img src="assets/burgerfarm.png" 
            class="w-full h-48 sm:h-56 lg:h-64 object-contain bg-white p-4 rounded-lg shadow-md" 
            alt="Uniform sample 1" 
@@ -381,13 +380,13 @@
            alt="Uniform sample 5" 
            loading="lazy" 
            data-lightbox>
-      <img src="assets/coffee.jpg" 
+      <img src="assets/coffee.jpeg" 
            class="w-full h-48 sm:h-56 lg:h-64 object-contain bg-white p-4 rounded-lg shadow-md" 
            alt="Uniform sample 6" 
            loading="lazy" 
            data-lightbox>
 
-       <img src="assets/waffle.jpg" 
+       <img src="assets/waffle.jpeg" 
            class="w-full h-48 sm:h-56 lg:h-64 object-contain bg-white p-4 rounded-lg shadow-md" 
            alt="Uniform sample 6" 
            loading="lazy" 
@@ -397,6 +396,53 @@
 
   <div id="lightbox" role="dialog" aria-label="Image preview">
     <img src="" alt="">
+  </div>
+</section>
+ -->
+
+  <section id="gallery" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-serif text-brand text-center">Trusted by schools & brands across Rajasthan</h2>
+
+    <!-- Carousel Container -->
+    <div class="relative mt-10">
+      <!-- Carousel Wrapper -->
+      <div id="carousel" class="flex overflow-x-auto space-x-4 scroll-smooth snap-x snap-mandatory scrollbar-hide">
+        <img src="assets/burgerfarm.png"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 1" loading="lazy">
+        <img src="assets/mgps.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 2" loading="lazy">
+        <img src="assets/shristi.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 3" loading="lazy">
+        <img src="assets/euro.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 4" loading="lazy">
+        <img src="assets/centralacademy.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 5" loading="lazy">
+        <img src="assets/coffee.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 6" loading="lazy">
+        <img src="assets/waffle.jpeg"
+             class="h-56 sm:h-64 lg:h-72 object-contain bg-white p-4 rounded-lg shadow-md flex-shrink-0 snap-center"
+             alt="Uniform sample 7" loading="lazy">
+      </div>
+
+      <!-- Prev Button -->
+      <button onclick="scrollCarousel(-1)"
+              class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2">
+        ◀
+      </button>
+
+      <!-- Next Button -->
+      <button onclick="scrollCarousel(1)"
+              class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md rounded-full p-2">
+        ▶
+      </button>
+    </div>
   </div>
 </section>
 
